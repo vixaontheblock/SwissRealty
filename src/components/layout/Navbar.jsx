@@ -16,44 +16,36 @@ function Navbar() {
 
   return (
     <>
-      {/* TOP BAR */}
       <header className="fixed top-0 left-0 w-full z-50">
-        <div className="backdrop-blur-xl bg-white/70 border-b border-neutral-200">
-
+        <div className="bg-white/70 backdrop-blur-xl border-b border-neutral-200">
           <div className="max-w-7xl mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
 
             {/* BRAND */}
             <Link
               to="/"
-              className="text-sm md:text-base tracking-[0.35em] uppercase font-light"
+              className="tracking-[0.35em] uppercase text-sm font-light"
             >
               Swiss Panama Realty
             </Link>
 
-            {/* DESKTOP LINKS */}
-            <div className="hidden md:flex gap-12 text-xs tracking-[0.25em] uppercase">
+            {/* DESKTOP NAV */}
+            <div className="hidden md:flex items-center gap-10">
               {links.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
-                  className={`relative transition ${
+                  className={`text-xs uppercase tracking-[0.25em] transition ${
                     isActive(link.to)
                       ? "text-black"
                       : "text-neutral-400 hover:text-black"
                   }`}
                 >
                   {link.label}
-
-                  <span
-                    className={`absolute left-0 -bottom-2 h-[1px] bg-black transition-all ${
-                      isActive(link.to) ? "w-full" : "w-0"
-                    }`}
-                  />
                 </Link>
               ))}
             </div>
 
-            {/* MOBILE BUTTON */}
+            {/* RIGHT */}
             <button
               onClick={() => setOpen(!open)}
               className="md:hidden flex flex-col gap-[5px]"
@@ -67,16 +59,16 @@ function Navbar() {
         </div>
       </header>
 
-      {/* MOBILE PANEL */}
+      {/* MOBILE */}
       {open && (
-        <div className="fixed inset-0 z-40 bg-white flex flex-col justify-center items-center gap-10">
+        <div className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-50 p-10 flex flex-col gap-8 shadow-2xl">
 
           {links.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               onClick={() => setOpen(false)}
-              className={`text-lg tracking-[0.25em] uppercase ${
+              className={`text-sm uppercase tracking-[0.2em] ${
                 isActive(link.to)
                   ? "text-black"
                   : "text-neutral-400"

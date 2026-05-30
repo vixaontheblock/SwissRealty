@@ -5,18 +5,18 @@ function PropertyContactForm() {
 
         {/* HEADER */}
         <h3 className="text-5xl font-light mb-6 tracking-tight">
-          Solicitar información
+          Request Information
         </h3>
 
         <p className="text-white/70 mb-10 leading-7">
-          Agenda una visita privada o recibe más detalles sobre esta propiedad en Coronado.
+          Schedule a private viewing or receive more details about this property in Coronado.
         </p>
 
         {/* FORM */}
         <div className="space-y-4">
 
           <input
-            placeholder="Nombre"
+            placeholder="Name"
             className="
               w-full
               px-5 py-4
@@ -58,7 +58,7 @@ function PropertyContactForm() {
           />
 
           <textarea
-            placeholder="Mensaje"
+            placeholder="Message"
             className="
               w-full
               px-5 py-4
@@ -79,9 +79,9 @@ function PropertyContactForm() {
             "
           />
 
-          {/* BUTTON (SYSTEM CONSISTENT) */}
+          {/* BUTTON */}
           <button className="btn btn-primary w-full mt-4">
-            Enviar solicitud
+            Send Request
           </button>
 
         </div>

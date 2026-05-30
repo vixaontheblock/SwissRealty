@@ -4,13 +4,14 @@ function PropertyDescription() {
       <div className="max-w-4xl mx-auto">
 
         <h3 className="text-sm uppercase tracking-[4px] text-neutral-400 mb-6">
-          Descripción
+          Description
         </h3>
 
         <p className="text-lg leading-8 text-neutral-700">
-          Venta de acogedora casa en Coronado. Cuenta con 3 recámaras,
-          3 baños, sala, comedor, cocina abierta, lavandería interna,
-          terraza techada, piscina con bohío, completamente cercada.
+          Cozy home for sale in Coronado. The property features 3 bedrooms,
+          3 bathrooms, a living room, dining area, open-concept kitchen,
+          indoor laundry, covered terrace, swimming pool with a bohío, and
+          is fully fenced for privacy and security.
         </p>
 
       </div>

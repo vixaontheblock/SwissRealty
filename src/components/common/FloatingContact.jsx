@@ -1,37 +1,81 @@
+import { useState } from "react";
+
 function FloatingContact() {
-  const phone = "50760000000";
+  const [open, setOpen] = useState(false);
 
   return (
-    <a
-      href={`https://wa.me/${phone}`}
-      target="_blank"
-      rel="noreferrer"
-      className="
-        fixed bottom-6 right-6 z-50
-        bg-white/95 backdrop-blur-xl
-        border border-neutral-200
-        rounded-[28px]
-        shadow-xl
-        p-5 w-[280px]
-        hover:scale-[1.02] transition
-      "
-    >
-      <p className="text-xs uppercase tracking-[3px] text-neutral-400">
-        Private Advisor
-      </p>
+    <div className="fixed bottom-6 right-6 z-50">
 
-      <h3 className="text-lg font-light mt-2">
-        WhatsApp Consultation
-      </h3>
+      {/* MAIN BUTTON (SMALL + DISCREET) */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="
+          w-11 h-11
+          rounded-full
+          bg-black/80 text-white
+          backdrop-blur-md
 
-      <p className="text-sm text-neutral-500 mt-2">
-        Get details or schedule a visit.
-      </p>
+          flex items-center justify-center
+          text-sm
 
-      <div className="mt-4 text-sm uppercase tracking-[2px]">
-        Contact →
-      </div>
-    </a>
+          hover:bg-black
+          hover:scale-105
+          transition
+        "
+      >
+        ✉
+      </button>
+
+      {/* OPTIONS (MINIMAL POPUP) */}
+      {open && (
+        <div className="
+          absolute bottom-14 right-0
+          flex flex-col gap-2
+          items-end
+        ">
+
+          <a
+            href="mailto:info@swisspanamarealty.com"
+            className="
+              px-3 py-2
+              rounded-full
+              bg-white/90 backdrop-blur-md
+              border border-neutral-200
+
+              text-xs uppercase tracking-[0.2em]
+              text-neutral-700
+
+              hover:bg-black hover:text-white
+              transition
+            "
+          >
+            Email
+          </a>
+
+          <a
+            href="https://wa.me/50760000000"
+            target="_blank"
+            rel="noreferrer"
+            className="
+              px-3 py-2
+              rounded-full
+              bg-white/90 backdrop-blur-md
+              border border-neutral-200
+
+              text-xs uppercase tracking-[0.2em]
+              text-neutral-700
+
+              hover:bg-black hover:text-white
+              transition
+            "
+          >
+            WhatsApp
+          </a>
+
+        </div>
+      )}
+
+    </div>
   );
 }
 
