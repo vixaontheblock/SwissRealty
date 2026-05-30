@@ -12,31 +12,25 @@ function Home() {
     <>
       <Navbar />
 
-      {/* MAIN CONTENT (semantic core of page) */}
-      <main id="main-content">
+      <main className="flex flex-col">
 
-        {/* HERO SECTION */}
-        <section aria-label="Hero section">
+        <section className="pt-28">
           <Hero />
         </section>
 
-        {/* FEATURED PROPERTIES SECTION */}
-        <section aria-label="Featured properties section">
+        <section className="py-24 bg-white">
           <FeaturedProperties />
         </section>
 
-        {/* WHY PANAMA SECTION */}
-        <section aria-label="Why invest in Panama section">
+        <section className="py-28 bg-neutral-50">
           <WhyPanama />
         </section>
 
-        {/* LIFESTYLE SECTION */}
-        <section aria-label="Lifestyle section">
+        <section className="py-28 bg-white">
           <Lifestyle />
         </section>
 
-        {/* CALL TO ACTION SECTION */}
-        <section aria-label="Call to action section">
+        <section className="py-32 bg-neutral-950 text-white">
           <CTASection />
         </section>
 

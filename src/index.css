@@ -1,5 +1,7 @@
 :root {
-  /* ===== COLORS SYSTEM ===== */
+  /* =========================
+     COLORS
+  ========================= */
   --text: #6b6375;
   --text-h: #0b0a0f;
   --bg: #ffffff;
@@ -7,29 +9,48 @@
 
   --accent: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
 
   --muted: #9ca3af;
 
-  /* ===== SHADOWS (CLEAN PREMIUM) ===== */
+  /* =========================
+     SHADOWS
+  ========================= */
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12);
 
-  /* ===== TYPO ===== */
+  /* =========================
+     TYPOGRAPHY
+  ========================= */
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --heading: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
 
-  /* ===== MOTION SYSTEM (CLAVE PARA TU UX) ===== */
-  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  /* =========================
+     MOTION SYSTEM (CLAVE UX)
+  ========================= */
+  --ease-ios: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
 
-  --duration-fast: 200ms;
-  --duration-medium: 400ms;
-  --duration-slow: 650ms;
+  --fast: 180ms;
+  --medium: 420ms;
+  --slow: 700ms;
 
-  /* ===== BASE ===== */
+  /* =========================
+     SPACING SYSTEM (8pt GRID)
+  ========================= */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* =========================
+     BASE
+  ========================= */
   font: 16px/150% var(--sans);
   color: var(--text);
   background: var(--bg);
@@ -46,15 +67,12 @@
     --text-h: #f3f4f6;
     --bg: #0f1115;
     --border: #2a2d36;
-    --accent: #c084fc;
-
-    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.5);
-    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.6);
   }
 }
 
-/* ===== RESET ===== */
+/* =========================
+   RESET
+========================= */
 * {
   box-sizing: border-box;
 }
@@ -65,7 +83,6 @@ body {
   color: var(--text);
 }
 
-/* ===== ROOT (IMPORTANTE: YA NO FIJO WIDTH) ===== */
 #root {
   width: 100%;
   min-height: 100vh;
@@ -73,7 +90,9 @@ body {
   flex-direction: column;
 }
 
-/* ===== TYPOGRAPHY ===== */
+/* =========================
+   TYPOGRAPHY
+========================= */
 h1,
 h2,
 h3,
@@ -86,34 +105,28 @@ h4 {
 
 h1 {
   font-size: clamp(2rem, 4vw, 3.5rem);
-  margin: 2rem 0;
 }
 
 h2 {
   font-size: clamp(1.25rem, 2vw, 1.5rem);
 }
 
-p {
-  margin: 0;
-  color: inherit;
-}
-
-/* ===== LINKS (NO BLUE BUG EVER) ===== */
+/* =========================
+   LINKS
+========================= */
 a {
   color: inherit;
   text-decoration: none;
-  transition: opacity var(--duration-fast) var(--ease-smooth);
+  transition: opacity var(--fast) var(--ease-ios);
 }
 
 a:hover {
   opacity: 0.8;
 }
 
-/* ===== BUTTON SYSTEM ===== */
-button {
-  font-family: inherit;
-}
-
+/* =========================
+   BUTTONS
+========================= */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -129,16 +142,18 @@ button {
   cursor: pointer;
 
   transition:
-    transform var(--duration-fast) var(--ease-smooth),
-    background var(--duration-medium) var(--ease-smooth),
-    color var(--duration-medium) var(--ease-smooth);
+    transform var(--fast) var(--ease-ios),
+    background var(--medium) var(--ease-ios),
+    color var(--medium) var(--ease-ios);
 }
 
 .btn:active {
   transform: scale(0.97);
 }
 
-/* ===== INPUTS ===== */
+/* =========================
+   INPUTS
+========================= */
 input,
 textarea {
   font-family: inherit;
@@ -150,8 +165,9 @@ textarea {
 
   outline: none;
 
-  transition: border-color var(--duration-fast) var(--ease-smooth),
-              box-shadow var(--duration-fast) var(--ease-smooth);
+  transition:
+    border-color var(--fast) var(--ease-ios),
+    box-shadow var(--fast) var(--ease-ios);
 }
 
 input:focus,
@@ -160,7 +176,9 @@ textarea:focus {
   box-shadow: 0 0 0 3px var(--accent-bg);
 }
 
-/* ===== CARDS ===== */
+/* =========================
+   CARDS
+========================= */
 .card {
   background: white;
   border: 1px solid var(--border);
@@ -168,8 +186,9 @@ textarea:focus {
 
   box-shadow: var(--shadow-sm);
 
-  transition: transform var(--duration-medium) var(--ease-smooth),
-              box-shadow var(--duration-medium) var(--ease-smooth);
+  transition:
+    transform var(--medium) var(--ease-ios),
+    box-shadow var(--medium) var(--ease-ios);
 }
 
 .card:hover {
@@ -177,21 +196,9 @@ textarea:focus {
   box-shadow: var(--shadow-md);
 }
 
-/* ===== UTILITIES ===== */
+/* =========================
+   UTILITIES
+========================= */
 .text-muted {
   color: var(--muted);
-}
-
-/* ===== SCROLLBAR ===== */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #c4c4c4;
-  border-radius: 999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #9ca3af;
 }
