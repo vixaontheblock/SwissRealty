@@ -1,0 +1,227 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root {
+  --bg: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --dark: #0b0f19;
+
+  --primary: #111827;
+  --border: #e5e7eb;
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-xl: 999px;
+}
+
+/* =========================
+   BASE RESET
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+/* =========================
+   TYPOGRAPHY (CONTROLLED)
+========================= */
+h1, h2, h3, h4 {
+  color: inherit;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+p, span, li {
+  color: inherit;
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* =========================
+   LINKS (NO BLUE BUG EVER)
+========================= */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* =========================
+   BUTTON SYSTEM
+========================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 28px;
+
+  border-radius: var(--radius-xl);
+
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  user-select: none;
+}
+
+/* PRIMARY */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border: 1px solid var(--primary);
+}
+
+.btn-primary:hover {
+  background: white;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* SECONDARY */
+.btn-secondary {
+  background: white;
+  color: var(--primary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* SOFT */
+.btn-soft {
+  background: #f3f4f6;
+  color: var(--primary);
+}
+
+.btn-soft:hover {
+  background: #e5e7eb;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* =========================
+   CARDS
+========================= */
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   FORMS
+========================= */
+input,
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  font-family: inherit;
+  outline: none;
+  transition: all 0.2s ease;
+  color: var(--text);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary);
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* =========================
+   SECTIONS (SYSTEM REAL)
+========================= */
+.section-dark {
+  background: var(--dark);
+  color: white;
+}
+
+.section-dark p,
+.section-dark span,
+.section-dark li,
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+  color: white;
+}
+
+.section-dark .text-muted {
+  color: rgba(255,255,255,0.7);
+}
+
+/* =========================
+   UTILITIES
+========================= */
+.text-muted {
+  color: var(--muted);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}

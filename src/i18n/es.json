@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "properties": "Propiedades",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Bienes Raíces de Lujo en Panamá",
+    "subtitle": "Propiedades exclusivas para compradores internacionales"
+  },
+  "cta": {
+    "contact": "Contáctanos"
+  },
+  "about": {
+    "title": "Expertos en Bienes Raíces en Panamá",
+    "text": "Nos especializamos en propiedades de lujo y oportunidades de inversión en Panamá."
+  },
+  "contact": {
+    "title": "Hablemos de tu próxima propiedad",
+    "subtitle": "Respondemos en menos de 24 horas con atención personalizada."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "properties": "Propriétés",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Immobilier de luxe au Panama",
+    "subtitle": "Propriétés exclusives pour acheteurs internationaux"
+  },
+  "cta": {
+    "contact": "Nous contacter"
+  },
+  "about": {
+    "title": "Experts immobiliers au Panama",
+    "text": "Nous sommes spécialisés dans l’immobilier de luxe et les investissements au Panama."
+  },
+  "contact": {
+    "title": "Parlons de votre prochaine propriété",
+    "subtitle": "Nous répondons sous 24 heures."
+  }
+}
