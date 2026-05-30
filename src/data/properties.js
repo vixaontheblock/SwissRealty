@@ -1,21 +1,22 @@
-// ─── FOTOS ────────────────────────────────────────────────────────────────────
-// Importa tus imágenes locales aquí. Estructura de carpetas:
-//   src/assets/properties/las-quintas/hero.webp
-//   src/assets/properties/las-quintas/pool.webp  ... etc.
-//
-// Para agregar una propiedad nueva:
-//   1. Crea src/assets/properties/SLUG/  y sube tus fotos
-//   2. Importa las fotos abajo
-//   3. Copia el objeto y rellena los datos
+// ─── FOTOS REALES ─────────────────────────────────────────────────────────────
+// Archivos existentes en src/assets/properties/las-quintas/
 
-import lasQuintasHero    from "../assets/properties/las-quintas/hero.webp";
-import lasQuintasPool    from "../assets/properties/las-quintas/pool.webp";
-import lasQuintasKitchen from "../assets/properties/las-quintas/kitchen.webp";
-import lasQuintasLiving  from "../assets/properties/las-quintas/living.webp";
-import lasQuintasTerrace from "../assets/properties/las-quintas/terrace.webp";
-import lasQuintasBedroom from "../assets/properties/las-quintas/bedroom.webp";
-import lasQuintasBath    from "../assets/properties/las-quintas/bathroom.webp";
-import lasQuintasGarden  from "../assets/properties/las-quintas/garden.webp";
+import lasQuintasMain      from "../assets/properties/las-quintas/mainphoto.jpg";
+import lasQuintasPool      from "../assets/properties/las-quintas/pool.jpg";
+import lasQuintasPool2     from "../assets/properties/las-quintas/pool2.jpg";
+import lasQuintasLounge    from "../assets/properties/las-quintas/lounge.jpg";
+import lasQuintasLounge2   from "../assets/properties/las-quintas/lounge2.jpg";
+import lasQuintasKitchen   from "../assets/properties/las-quintas/kitchen.jpg";
+import lasQuintasDining    from "../assets/properties/las-quintas/diningroom.jpg";
+import lasQuintasDining2   from "../assets/properties/las-quintas/diningroom2.jpg";
+import lasQuintasDining3   from "../assets/properties/las-quintas/diningroom3.jpg";
+import lasQuintasMainRoom  from "../assets/properties/las-quintas/main-room.jpg";
+import lasQuintasRoom2     from "../assets/properties/las-quintas/room-2.jpg";
+import lasQuintasRoom3     from "../assets/properties/las-quintas/room-3.jpg";
+import lasQuintasBackyard  from "../assets/properties/las-quintas/backyard.jpg";
+import lasQuintasBackyard2 from "../assets/properties/las-quintas/backyard2.jpg";
+import lasQuintasBackyard3 from "../assets/properties/las-quintas/backyard3.jpg";
+import lasQuintasEntrance  from "../assets/properties/las-quintas/view-tw-the-entrance.jpg";
 
 // ─── PROPERTIES ARRAY ─────────────────────────────────────────────────────────
 const properties = [
@@ -26,8 +27,8 @@ const properties = [
     status:   "renovation",   // "sale" | "renovation" | "sold"
 
     title:    "Casa en Las Quintas",
-    subtitle: "Coronado, Panama",
-    location: "Las Quintas Residential Community · Coronado, Panama",
+    subtitle: "Coronado, Panamá Oeste",
+    location: "Residencial Las Quintas · Coronado, Panamá",
 
     price:    295000,
     currency: "USD",
@@ -41,99 +42,92 @@ const properties = [
       pool:      true,
     },
 
-    // Hero image (shown in cards + PropertyHero)
-    image: lasQuintasHero,
+    // Hero image (tarjetas + PropertyHero)
+    image: lasQuintasMain,
 
-    // Gallery images (shown in PropertyGallery)
-    // First image is the "hero" large image
+    // Galería actual (fotos del estado presente)
     gallery: [
       lasQuintasPool,
-      lasQuintasLiving,
-      lasQuintasTerrace,
+      lasQuintasPool2,
+      lasQuintasLounge,
+      lasQuintasLounge2,
       lasQuintasKitchen,
-      lasQuintasBedroom,
-      lasQuintasBath,
-      lasQuintasGarden,
+      lasQuintasDining,
+      lasQuintasDining2,
+      lasQuintasDining3,
+      lasQuintasMainRoom,
+      lasQuintasRoom2,
+      lasQuintasRoom3,
+      lasQuintasBackyard,
+      lasQuintasBackyard2,
+      lasQuintasBackyard3,
+      lasQuintasEntrance,
     ],
 
-    description: `Cozy home for sale in Coronado, Las Quintas. The property features 3 bedrooms,
-3 bathrooms, a living room, dining area, open-concept kitchen, indoor laundry,
-covered terrace, swimming pool with a bohío, and is fully fenced for privacy and security.
-Currently undergoing full renovation to deliver in premium condition.`,
+    // Sección Before/After — agrega tus fotos "antes" y "después" aquí
+    // Cuando tengas fotos de remodelación, llena este array:
+    beforeAfter: [
+      // Ejemplo de estructura:
+      // { label: "Sala de Estar", before: lasQuintasLounge, after: null },
+      // { label: "Cocina",        before: lasQuintasKitchen, after: null },
+      // Por ahora usamos las fotos actuales como "before":
+      { label: "Sala Principal",  before: lasQuintasLounge,   after: null },
+      { label: "Cocina",          before: lasQuintasKitchen,  after: null },
+      { label: "Comedor",         before: lasQuintasDining,   after: null },
+      { label: "Habitación Principal", before: lasQuintasMainRoom, after: null },
+      { label: "Piscina",         before: lasQuintasPool,     after: null },
+      { label: "Jardín",          before: lasQuintasBackyard, after: null },
+    ],
+
+    description: `Acogedora casa en venta en Coronado, Las Quintas. La propiedad cuenta con 3 habitaciones, 3 baños, sala de estar, comedor, cocina de concepto abierto, lavandería interior, terraza techada, piscina con bohío, y está totalmente enrejada para privacidad y seguridad. Actualmente en proceso de remodelación completa para entregarse en condición premium.`,
 
     features: [
-      "Furnished",
-      "Service Bathroom",
+      "Amoblada",
+      "Baño de Servicio",
       "Bohío",
-      "Gated Property",
-      "Dining Area",
-      "Maid's Room",
-      "Breakfast Area",
-      "Laundry Room",
-      "White Goods Included",
-      "Swimming Pool",
-      "Living Room",
-      "Covered Terrace",
+      "Propiedad Enrejada",
+      "Área de Comedor",
+      "Cuarto de Servicio",
+      "Área de Desayuno",
+      "Lavandería",
+      "Electrodomésticos Incluidos",
+      "Piscina",
+      "Sala de Estar",
+      "Terraza Techada",
     ],
 
     nearby: [
-      { label: "Coronado Beach",    detail: "Pacific coastline, 5 min drive" },
-      { label: "Golf Club",         detail: "18-hole course, 3 km away" },
-      { label: "Supermarket",       detail: "Supermarket Rey, 5 km" },
-      { label: "Medical Center",    detail: "Pacífica Salud, 12 km" },
-      { label: "Panama City",       detail: "80 km · ~1 hr drive" },
-      { label: "Tocumen Airport",   detail: "International, 95 km" },
+      { label: "Playa de Coronado",  detail: "Costa Pacífica, 5 min en auto" },
+      { label: "Club de Golf",       detail: "Campo de 18 hoyos, 3 km" },
+      { label: "Supermercado",       detail: "Supermercado Rey, 5 km" },
+      { label: "Centro Médico",      detail: "Pacífica Salud, 12 km" },
+      { label: "Ciudad de Panamá",   detail: "80 km · ~1 hr en auto" },
+      { label: "Aeropuerto Tocumen", detail: "Internacional, 95 km" },
     ],
 
-    // Exact coordinates (Las Quintas, Coronado)
     lat: 8.52854,
     lng: -79.89407,
 
-    // Google Maps link
-    googleMapsUrl:  "https://maps.app.goo.gl/qas7JuuX64CQikCM6",
-    appleMapsUrl:   "https://maps.apple.com/?q=8.52854,-79.89407",
+    googleMapsUrl: "https://maps.app.goo.gl/qas7JuuX64CQikCM6",
+    appleMapsUrl:  "https://maps.apple.com/?q=8.52854,-79.89407",
 
-    // 360 / drone — paste embed URLs when ready
-    tour360Url:   "",  // e.g. "https://my.matterport.com/show/?m=XXXXX"
-    droneVideoUrl:"",  // e.g. "https://www.youtube.com/embed/XXXXX"
+    tour360Url:    "",
+    droneVideoUrl: "",
 
     tableDetails: [
-      { label: "Property ID",   value: "SPR-0001" },
-      { label: "Type",          value: "House · For Sale" },
-      { label: "Status",        value: "Under Renovation" },
-      { label: "Bedrooms",      value: "3" },
-      { label: "Bathrooms",     value: "3" },
-      { label: "Construction",  value: "220 m²" },
-      { label: "Land Area",     value: "1,536 m²" },
-      { label: "Garage",        value: "1 space" },
-      { label: "Pool",          value: "Yes · with Bohío" },
-      { label: "Community",     value: "Las Quintas, Coronado" },
-      { label: "Province",      value: "Panamá Oeste" },
+      { label: "ID Propiedad",    value: "SPR-0001" },
+      { label: "Tipo",            value: "Casa · En Venta" },
+      { label: "Estado",          value: "En Remodelación" },
+      { label: "Habitaciones",    value: "3" },
+      { label: "Baños",           value: "3" },
+      { label: "Construcción",    value: "220 m²" },
+      { label: "Área del Lote",   value: "1,536 m²" },
+      { label: "Garaje",          value: "1 espacio" },
+      { label: "Piscina",         value: "Sí · con Bohío" },
+      { label: "Comunidad",       value: "Las Quintas, Coronado" },
+      { label: "Provincia",       value: "Panamá Oeste" },
     ],
   },
-
-  // ── TEMPLATE — copy this for the next property ─────────────────────────────
-  // {
-  //   id:       "property-slug",
-  //   slug:     "property-slug",
-  //   featured: false,
-  //   status:   "sale",
-  //   title:    "Property Name",
-  //   subtitle: "Location, Panama",
-  //   location: "Full address",
-  //   price:    000000,
-  //   currency: "USD",
-  //   specs: { bedrooms: 0, bathrooms: 0, areaSqm: 0, lotSqm: 0, garage: 0, pool: false },
-  //   image:   importedHeroImage,
-  //   gallery: [],
-  //   description: "",
-  //   features: [],
-  //   nearby: [],
-  //   lat: 0, lng: 0,
-  //   googleMapsUrl: "", appleMapsUrl: "",
-  //   tour360Url: "", droneVideoUrl: "",
-  //   tableDetails: [],
-  // },
 ];
 
 export default properties;

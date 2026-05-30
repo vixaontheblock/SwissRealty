@@ -1,39 +1,61 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import entranceImg from "../../assets/properties/las-quintas/view-tw-the-entrance.jpg";
 
 export default function CTASection() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative py-24 md:py-36 bg-black text-white overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-black to-black" />
+    <section className="relative overflow-hidden bg-neutral-900 text-white">
+      {/* Background image with strong overlay */}
+      <img src={entranceImg} alt=""
+        className="absolute inset-0 w-full h-full object-cover opacity-20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/90 via-neutral-900/80 to-neutral-900/95" />
 
-      <div className="relative max-w-4xl mx-auto px-5 md:px-8 text-center">
-        <p className="uppercase tracking-[0.4em] text-xs text-white/50">
-          {t("cta.label")}
-        </p>
-        <h2 style={{ color: "#ffffff" }}
-          className="text-3xl md:text-5xl font-light mt-6 leading-tight whitespace-pre-line">
-          {t("cta.title")}
-        </h2>
-        <p className="mt-7 text-white/60 leading-7 text-base md:text-lg max-w-2xl mx-auto">
-          {t("cta.subtitle")}
-        </p>
+      <div className="relative max-w-7xl mx-auto px-5 md:px-8 py-24 md:py-40">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
 
-        <div className="mt-10 md:mt-12 flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
-          <Link to="/contact"
-            className="btn btn-primary bg-white text-black border border-white hover:bg-transparent hover:text-white transition">
-            {t("cta.primary")}
-          </Link>
-          <Link to="/properties"
-            className="btn btn-secondary border-white/30 text-white hover:bg-white hover:text-black transition">
-            {t("cta.secondary")}
-          </Link>
+          {/* LEFT */}
+          <div>
+            <p className="text-xs uppercase tracking-[0.4em] text-white/40 mb-6">
+              {t("cta.label")}
+            </p>
+            <h2 className="text-3xl md:text-5xl font-light leading-[1.1] whitespace-pre-line mb-8"
+              style={{ letterSpacing: "-0.02em" }}>
+              {t("cta.title")}
+            </h2>
+            <p className="text-white/55 leading-7 text-base max-w-md">
+              {t("cta.subtitle")}
+            </p>
+          </div>
+
+          {/* RIGHT */}
+          <div className="flex flex-col gap-4">
+            <Link to="/contact"
+              className="btn btn-primary bg-white text-black border border-white hover:bg-transparent hover:text-white transition w-full justify-center">
+              {t("cta.primary")}
+            </Link>
+            <Link to="/properties"
+              className="btn btn-secondary border-white/20 text-white hover:bg-white hover:text-black transition w-full justify-center">
+              {t("cta.secondary")}
+            </Link>
+
+            {/* Credibility row */}
+            <div className="mt-6 pt-6 border-t border-white/10 flex flex-wrap gap-8">
+              {[
+                { n: "SPR-0001", l: "Primera Propiedad" },
+                { n: "100%", l: "Privacidad Garantizada" },
+                { n: "< 24h", l: "Tiempo de Respuesta" },
+              ].map(({ n, l }) => (
+                <div key={l}>
+                  <div className="text-white font-light text-lg">{n}</div>
+                  <div className="text-white/35 text-[10px] uppercase tracking-[0.2em]">{l}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
-
-        <p className="mt-12 text-xs text-white/30 tracking-[0.3em] uppercase">
-          Swiss Panama Realty • Luxury Real Estate Experience
-        </p>
       </div>
     </section>
   );

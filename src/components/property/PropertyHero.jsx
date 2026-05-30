@@ -1,3 +1,5 @@
+import entranceImg from "../../assets/properties/las-quintas/view-tw-the-entrance.jpg";
+
 function PropertyHero({ property }) {
   const scrollToContact = () =>
     document.getElementById("property-contact")?.scrollIntoView({ behavior: "smooth" });
@@ -9,39 +11,63 @@ function PropertyHero({ property }) {
       <img
         src={property.image}
         alt={property.title}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover scale-105"
+        style={{ transition: "transform 8s ease-out", transform: "scale(1)" }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/75" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
+
+      {/* Status badge top-left */}
+      <div className="absolute top-28 left-5 md:left-8 z-10">
+        <span className="inline-flex items-center gap-2 bg-amber-400/90 backdrop-blur text-black
+          text-[10px] uppercase tracking-[0.2em] px-4 py-2 rounded-full font-medium">
+          <span className="w-1.5 h-1.5 rounded-full bg-black/40 animate-pulse" />
+          En Remodelación · Coronado
+        </span>
+      </div>
 
       <div className="relative z-10 h-full flex items-end">
         <div className="w-full max-w-7xl mx-auto px-5 md:px-8 pb-16 md:pb-24">
 
-          <p style={{ color: "rgba(255,255,255,0.6)" }}
-            className="uppercase tracking-[0.4em] text-xs mb-4">
-            Coronado · Las Quintas
-          </p>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+            <div>
+              <h1 style={{ color: "#ffffff", letterSpacing: "-0.02em" }}
+                className="text-4xl sm:text-5xl md:text-7xl max-w-3xl font-light leading-tight mb-4">
+                {property.title}
+              </h1>
+              <p style={{ color: "rgba(255,255,255,0.65)" }}
+                className="text-base md:text-lg max-w-xl leading-7 mb-8">
+                {property.subtitle} · Residencia privada tropical en transformación para elevar el estándar de vida en Coronado.
+              </p>
+              <div className="flex flex-wrap gap-3 md:gap-4">
+                <button onClick={scrollToGallery}
+                  className="btn btn-primary bg-white text-black border border-white hover:bg-transparent hover:text-white">
+                  Explorar Propiedad
+                </button>
+                <button onClick={scrollToContact}
+                  className="btn btn-secondary border-white/30 text-white hover:bg-white hover:text-black">
+                  Solicitar Consulta
+                </button>
+              </div>
+            </div>
 
-          <h1 style={{ color: "#ffffff" }}
-            className="text-4xl sm:text-5xl md:text-7xl max-w-4xl font-light leading-tight mb-4">
-            {property.title}
-          </h1>
-
-          <p style={{ color: "rgba(255,255,255,0.7)" }}
-            className="text-base md:text-lg max-w-xl leading-7 mb-8">
-            {property.subtitle} · A private tropical residence currently undergoing
-            transformation to elevate luxury living in Coronado.
-          </p>
-
-          <div className="flex flex-wrap gap-3 md:gap-5">
-            <button onClick={scrollToGallery}
-              className="btn btn-primary bg-white text-black border border-white hover:bg-transparent hover:text-white">
-              Explore Property
-            </button>
-            <button onClick={scrollToContact}
-              className="btn btn-secondary border-white/40 hover:bg-white hover:text-black"
-              style={{ color: "#000000ff" }}>
-              Request Consultation
-            </button>
+            {/* Specs card */}
+            <div className="flex-shrink-0 bg-white/10 backdrop-blur-lg border border-white/20
+              rounded-[20px] p-6 hidden md:block">
+              <div className="grid grid-cols-2 gap-x-10 gap-y-4">
+                {[
+                  ["$295,000", "Precio"],
+                  ["220 m²", "Construcción"],
+                  ["1,536 m²", "Lote"],
+                  ["3 / 3", "Hab. / Baños"],
+                ].map(([v, l]) => (
+                  <div key={l}>
+                    <div className="text-white text-lg font-light">{v}</div>
+                    <div className="text-white/45 text-[10px] uppercase tracking-[0.2em]">{l}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
         </div>

@@ -10,7 +10,7 @@ const LANGS = [
 
 function Navbar() {
   const location = useLocation();
-  const [open, setOpen]       = useState(false);
+  const [open, setOpen]         = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { t, i18n } = useTranslation();
 
@@ -53,33 +53,16 @@ function Navbar() {
           <Link to="/" className="tracking-[0.3em] uppercase text-sm font-light text-neutral-900">
             Swiss Panama Realty
           </Link>
-          <div className="flex items-center gap-3">
-            {/* Lang pills mobile */}
-            <div className="flex gap-1">
-              {LANGS.map((l) => (
-                <button
-                  key={l.code}
-                  onClick={() => changeLang(l.code)}
-                  className={`text-[10px] uppercase tracking-wider px-2 py-1 rounded-lg transition-all
-                    ${i18n.language === l.code
-                      ? "bg-neutral-900 text-white"
-                      : "text-neutral-400 hover:text-neutral-700"}`}
-                >
-                  {l.label}
-                </button>
-              ))}
-            </div>
-            {/* Hamburger */}
-            <button
-              onClick={() => setOpen(true)}
-              className="w-9 h-9 flex flex-col justify-center items-end gap-[5px]"
-              aria-label="Open menu"
-            >
-              <span className="w-6 h-[1px] bg-neutral-900 block" />
-              <span className="w-6 h-[1px] bg-neutral-900 block" />
-              <span className="w-4 h-[1px] bg-neutral-900 block" />
-            </button>
-          </div>
+          {/* Solo el hamburger — sin pills de idioma aquí */}
+          <button
+            onClick={() => setOpen(true)}
+            className="w-9 h-9 flex flex-col justify-center items-end gap-[5px]"
+            aria-label="Open menu"
+          >
+            <span className="w-6 h-[1px] bg-neutral-900 block" />
+            <span className="w-6 h-[1px] bg-neutral-900 block" />
+            <span className="w-4 h-[1px] bg-neutral-900 block" />
+          </button>
         </div>
 
         {/* ── DESKTOP BAR ── */}
@@ -132,16 +115,19 @@ function Navbar() {
 
       {/* Mobile panel */}
       <aside className={`fixed top-0 right-0 h-full w-[85%] max-w-sm z-50
-        bg-white/95 backdrop-blur-2xl border-l border-neutral-200 shadow-2xl
-        flex flex-col justify-center gap-8 px-10
+        bg-white/98 backdrop-blur-2xl border-l border-neutral-200 shadow-2xl
+        flex flex-col justify-between px-10 py-12
         transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
         ${open ? "translate-x-0" : "translate-x-full"}`}
       >
+        {/* Close */}
         <button onClick={() => setOpen(false)}
           className="absolute top-6 right-6 text-xs uppercase tracking-[0.25em] text-neutral-400 hover:text-neutral-900 transition">
-          Close
+          ✕
         </button>
-        <nav className="flex flex-col gap-8">
+
+        {/* Nav links */}
+        <nav className="flex flex-col gap-8 mt-8">
           {links.map((link, i) => (
             <Link key={link.to} to={link.to} onClick={() => setOpen(false)}
               className={`text-2xl uppercase tracking-[0.2em]
@@ -154,6 +140,30 @@ function Navbar() {
             </Link>
           ))}
         </nav>
+
+        {/* Language switcher — en la parte inferior del menú */}
+        <div className={`transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
+          ${open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          style={{ transitionDelay: open ? "320ms" : "0ms" }}
+        >
+          <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-400 mb-4">
+            Language
+          </p>
+          <div className="flex gap-2">
+            {LANGS.map((l) => (
+              <button
+                key={l.code}
+                onClick={() => changeLang(l.code)}
+                className={`text-xs uppercase tracking-[0.15em] px-4 py-2 rounded-full border transition-all
+                  ${i18n.language === l.code
+                    ? "bg-neutral-900 text-white border-neutral-900"
+                    : "text-neutral-400 border-neutral-200 hover:text-neutral-900 hover:border-neutral-400"}`}
+              >
+                {l.label}
+              </button>
+            ))}
+          </div>
+        </div>
       </aside>
     </>
   );

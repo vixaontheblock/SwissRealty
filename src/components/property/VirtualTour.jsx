@@ -29,7 +29,7 @@ function VirtualTour({ property }) {
                 360° Tour — Coming Soon
               </p>
               <p className="text-xs text-neutral-400 tracking-[0.1em]">
-                Paste Matterport or Kuula URL in <code className="text-neutral-600">properties.js → tour360Url</code>
+                 <code className="text-neutral-600"></code>
               </p>
             </div>
           )}
@@ -52,7 +52,7 @@ function VirtualTour({ property }) {
                 Aerial Drone Video — Coming Soon
               </p>
               <p className="text-xs text-neutral-400 tracking-[0.1em]">
-                Paste YouTube embed URL in <code className="text-neutral-600">properties.js → droneVideoUrl</code>
+                <code className="text-neutral-600"></code>
               </p>
             </div>
           )}
