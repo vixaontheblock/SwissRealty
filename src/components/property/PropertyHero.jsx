@@ -1,46 +1,48 @@
-import hero from "../../assets/properties/las-quintas/hero.webp";
+function PropertyHero({ property }) {
+  const scrollToContact = () =>
+    document.getElementById("property-contact")?.scrollIntoView({ behavior: "smooth" });
 
-function PropertyHero() {
+  const scrollToGallery = () =>
+    document.getElementById("property-gallery")?.scrollIntoView({ behavior: "smooth" });
+
   return (
-    <section className="relative h-screen overflow-hidden">
-      {/* Background image */}
+    <section className="relative h-[90vh] min-h-[560px] overflow-hidden">
       <img
-        src={hero}
-        alt="Las Quintas Coronado"
+        src={property.image}
+        alt={property.title}
         className="absolute inset-0 w-full h-full object-cover"
       />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50" />
-
-      {/* Content */}
       <div className="relative z-10 h-full flex items-end">
-        <div className="max-w-7xl mx-auto px-8 pb-24 text-white w-full">
+        <div className="w-full max-w-7xl mx-auto px-5 md:px-8 pb-16 md:pb-24 text-white">
 
-          {/* Tag */}
-          <p className="uppercase tracking-[6px] text-sm text-neutral-300 mb-6">
+          <p className="uppercase tracking-[0.4em] text-xs text-white/60 mb-4">
             Coronado · Las Quintas
           </p>
 
-          {/* Title */}
-          <h1 className="text-5xl md:text-7xl max-w-4xl font-light leading-tight">
-            Tropical Luxury Living In Panama
+          <h1 className="text-4xl sm:text-5xl md:text-7xl max-w-4xl font-light leading-tight mb-4">
+            {property.title}
           </h1>
 
-          {/* Subtitle */}
-          <p className="mt-6 text-lg max-w-2xl text-neutral-200 leading-8">
-            A private tropical residence currently
-            undergoing transformation to elevate
-            luxury living in Coronado.
+          <p className="text-base md:text-lg max-w-xl text-white/70 leading-7 mb-8">
+            {property.subtitle} · A private tropical residence currently undergoing
+            transformation to elevate luxury living in Coronado.
           </p>
 
-          {/* CTA buttons */}
-          <div className="flex flex-wrap gap-5 mt-10">
-            <button className="bg-white text-black px-8 py-4 rounded-full uppercase tracking-[2px] text-sm hover:opacity-90 transition">
+          <div className="flex flex-wrap gap-3 md:gap-5">
+            <button
+              onClick={scrollToGallery}
+              className="btn btn-primary bg-white text-black border border-white
+                hover:bg-transparent hover:text-white"
+            >
               Explore Property
             </button>
-
-            <button className="border border-white text-white px-8 py-4 rounded-full uppercase tracking-[2px] text-sm hover:bg-white hover:text-black transition">
+            <button
+              onClick={scrollToContact}
+              className="btn btn-secondary border-white/40 text-white
+                hover:bg-white hover:text-black"
+            >
               Request Consultation
             </button>
           </div>

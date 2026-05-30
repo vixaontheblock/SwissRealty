@@ -1,19 +1,13 @@
-function PropertyDescription() {
+function PropertyDescription({ property }) {
   return (
-    <section className="py-20 px-8 bg-white">
+    <section className="py-12 md:py-20 px-5 md:px-8 bg-white border-t border-neutral-100">
       <div className="max-w-4xl mx-auto">
-
-        <h3 className="text-sm uppercase tracking-[4px] text-neutral-400 mb-6">
+        <h3 className="text-xs uppercase tracking-[4px] text-neutral-400 mb-6">
           Description
         </h3>
-
-        <p className="text-lg leading-8 text-neutral-700">
-          Cozy home for sale in Coronado. The property features 3 bedrooms,
-          3 bathrooms, a living room, dining area, open-concept kitchen,
-          indoor laundry, covered terrace, swimming pool with a bohío, and
-          is fully fenced for privacy and security.
+        <p className="text-base md:text-lg leading-8 text-neutral-700 whitespace-pre-line">
+          {property.description}
         </p>
-
       </div>
     </section>
   );

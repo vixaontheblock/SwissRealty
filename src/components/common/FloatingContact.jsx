@@ -1,80 +1,47 @@
 import { useState } from "react";
+import siteConfig from "../../data/siteConfig";
 
 function FloatingContact() {
   const [open, setOpen] = useState(false);
+  const { whatsapp, email } = siteConfig.contact;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-5 right-5 z-50">
+      {/* POPUP */}
+      <div className={`
+        absolute bottom-14 right-0 flex flex-col gap-2 items-end
+        transition-all duration-300
+        ${open ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"}
+      `}>
+        <a
+          href={`https://wa.me/${whatsapp.replace(/\D/g, "")}`}
+          target="_blank" rel="noreferrer"
+          className="px-4 py-2.5 rounded-full bg-white/90 backdrop-blur-md border border-neutral-200
+            text-xs uppercase tracking-[0.2em] text-neutral-700
+            hover:bg-black hover:text-white transition shadow-md whitespace-nowrap"
+        >
+          💬 WhatsApp
+        </a>
+        <a
+          href={`mailto:${email}`}
+          className="px-4 py-2.5 rounded-full bg-white/90 backdrop-blur-md border border-neutral-200
+            text-xs uppercase tracking-[0.2em] text-neutral-700
+            hover:bg-black hover:text-white transition shadow-md whitespace-nowrap"
+        >
+          ✉ Email
+        </a>
+      </div>
 
-      {/* MAIN BUTTON (SMALL + DISCREET) */}
+      {/* TOGGLE BUTTON */}
       <button
-        onClick={() => setOpen(!open)}
-        className="
-          w-11 h-11
-          rounded-full
-          bg-black/80 text-white
-          backdrop-blur-md
-
-          flex items-center justify-center
-          text-sm
-
-          hover:bg-black
-          hover:scale-105
-          transition
-        "
+        onClick={() => setOpen((o) => !o)}
+        className="w-12 h-12 rounded-full bg-black/85 text-white backdrop-blur-md
+          flex items-center justify-center text-lg shadow-xl
+          hover:bg-black hover:scale-105 transition"
+        aria-label="Contact"
       >
-        ✉
+        {open ? "✕" : "✉"}
       </button>
-
-      {/* OPTIONS (MINIMAL POPUP) */}
-      {open && (
-        <div className="
-          absolute bottom-14 right-0
-          flex flex-col gap-2
-          items-end
-        ">
-
-          <a
-            href="mailto:info@swisspanamarealty.com"
-            className="
-              px-3 py-2
-              rounded-full
-              bg-white/90 backdrop-blur-md
-              border border-neutral-200
-
-              text-xs uppercase tracking-[0.2em]
-              text-neutral-700
-
-              hover:bg-black hover:text-white
-              transition
-            "
-          >
-            Email
-          </a>
-
-          <a
-            href="https://wa.me/50760000000"
-            target="_blank"
-            rel="noreferrer"
-            className="
-              px-3 py-2
-              rounded-full
-              bg-white/90 backdrop-blur-md
-              border border-neutral-200
-
-              text-xs uppercase tracking-[0.2em]
-              text-neutral-700
-
-              hover:bg-black hover:text-white
-              transition
-            "
-          >
-            WhatsApp
-          </a>
-
-        </div>
-      )}
-
     </div>
   );
 }

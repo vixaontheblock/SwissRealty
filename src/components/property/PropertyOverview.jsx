@@ -1,29 +1,23 @@
-function PropertyOverview() {
+function PropertyOverview({ property }) {
+  const STATUS = { sale: "For Sale", renovation: "Under Renovation", sold: "Sold" };
+
   return (
-    <section className="py-24 px-8 bg-white">
+    <section className="py-16 md:py-24 px-5 md:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-
-        {/* TITLE */}
-        <h1 className="text-5xl md:text-6xl font-light tracking-tight leading-tight">
-          House in Coronado, Las Quintas
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-light tracking-tight leading-tight">
+          {property.title}
         </h1>
-
-        {/* LOCATION */}
-        <p className="text-neutral-500 mt-4 text-lg">
-          Las Quintas Residential Community · Coronado, Panama
+        <p className="text-neutral-500 mt-4 text-base md:text-lg">
+          {property.location}
         </p>
-
-        {/* PRICE */}
-        <div className="mt-10 flex items-baseline gap-4">
-          <span className="text-4xl font-light tracking-tight">
-            $295,000
+        <div className="mt-8 flex flex-wrap items-baseline gap-4">
+          <span className="text-3xl md:text-4xl font-light tracking-tight">
+            ${property.price.toLocaleString("en-US")}
           </span>
-
           <span className="text-sm uppercase tracking-[0.3em] text-neutral-400">
-            For Sale
+            {STATUS[property.status] || property.status}
           </span>
         </div>
-
       </div>
     </section>
   );

@@ -1,59 +1,61 @@
-import Navbar from "../components/layout/Navbar";
-import Footer from "../components/layout/Footer";
+import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
+import properties from "../data/properties";
 
-import PropertyHero from "../components/property/PropertyHero";
-import PropertySnapshot from "../components/property/PropertySnapshot";
-import PropertyOverview from "../components/property/PropertyOverview";
+import Navbar              from "../components/layout/Navbar";
+import Footer              from "../components/layout/Footer";
+import PropertyHero        from "../components/property/PropertyHero";
+import PropertySnapshot    from "../components/property/PropertySnapshot";
+import PropertyOverview    from "../components/property/PropertyOverview";
 import PropertyDescription from "../components/property/PropertyDescription";
-import PropertyGallery from "../components/property/PropertyGallery";
-import PropertyFeatures from "../components/property/PropertyFeatures";
-import PropertyNearby from "../components/property/PropertyNearby";
-import PropertyMap from "../components/property/PropertyMap";
+import PropertyGallery     from "../components/property/PropertyGallery";
+import PropertyFeatures    from "../components/property/PropertyFeatures";
+import PropertyNearby      from "../components/property/PropertyNearby";
+import PropertyMap         from "../components/property/PropertyMap";
 import PropertyDetailsTable from "../components/property/PropertyDetailsTable";
-
-import FloatingContact from "../components/common/FloatingContact";
+import VirtualTour         from "../components/property/VirtualTour";
 import PropertyContactForm from "../components/property/PropertyContactForm";
+import FloatingContact     from "../components/common/FloatingContact";
 
 function PropertyDetail() {
+  const { id } = useParams();
+  const property = properties.find((p) => p.slug === id || p.id === id);
+
+  // Scroll to top on load
+  useEffect(() => { window.scrollTo(0, 0); }, [id]);
+
+  if (!property) {
+    return (
+      <>
+        <Navbar />
+        <main className="min-h-screen flex flex-col items-center justify-center gap-6 text-center px-8 pt-32">
+          <p className="text-xs uppercase tracking-[0.4em] text-neutral-400">404</p>
+          <h1 className="text-4xl font-light">Property not found</h1>
+          <p className="text-neutral-500">This listing may have been removed or the URL is incorrect.</p>
+          <Link to="/properties" className="btn btn-primary mt-4">Browse Properties</Link>
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
   return (
     <>
       <Navbar />
-
       <main>
-        {/* HERO (emocional) */}
-        <PropertyHero />
-
-        {/* SNAPSHOT (datos rápidos) */}
-        <PropertySnapshot />
-
-        {/* OVERVIEW (precio + contexto) */}
-        <PropertyOverview />
-
-        {/* DESCRIPCIÓN (storytelling) */}
-        <PropertyDescription />
-
-        {/* GALLERY (visual selling) */}
-        <PropertyGallery />
-
-        {/* FEATURES (valor agregado) */}
-        <PropertyFeatures />
-
-        {/* NEARBY (lifestyle selling) */}
-        <PropertyNearby />
-
-        {/* MAP (ubicación premium) */}
-        <PropertyMap />
-
-        {/* DETAILS (data técnica) */}
-        <PropertyDetailsTable />
-
-        {/* CTA (conversión final) */}
-        <PropertyContactForm />
+        <PropertyHero        property={property} />
+        <PropertySnapshot    property={property} />
+        <PropertyOverview    property={property} />
+        <PropertyDescription property={property} />
+        <PropertyGallery     property={property} />
+        <PropertyFeatures    property={property} />
+        <VirtualTour         property={property} />
+        <PropertyNearby      property={property} />
+        <PropertyMap         property={property} />
+        <PropertyDetailsTable property={property} />
+        <PropertyContactForm property={property} />
       </main>
-
-      {/* FLOATING CONTACT (always visible conversion) */}
       <FloatingContact />
-
       <Footer />
     </>
   );
