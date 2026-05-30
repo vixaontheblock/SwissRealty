@@ -10,7 +10,14 @@
     "title": "Luxury Real Estate\nin Panama",
     "subtitle": "Exclusive coastal properties in Coronado and premium lifestyle communities.",
     "cta_primary": "Explore Properties",
-    "cta_secondary": "Contact Agent"
+    "cta_secondary": "Contact Agent",
+    "stat_price": "USD",
+    "stat_lot": "m² Land",
+    "stat_build": "m² Built",
+    "specs_beds": "Beds",
+    "specs_baths": "Baths",
+    "specs_build": "Built",
+    "specs_lot": "Land"
   },
   "featured": {
     "label": "Exclusive Listings",
@@ -20,6 +27,7 @@
     "view_all": "View All Properties"
   },
   "why": {
+    "label": "Safe Investment",
     "title": "Why Panama",
     "subtitle": "Panama combines dollar stability, strategic location, and strong real estate appreciation for international investors.",
     "card1_label": "Economy",
@@ -31,7 +39,12 @@
     "card3_label": "Lifestyle",
     "card3_title": "Coastal Living",
     "card3_text": "Tropical climate, beaches, golf resorts and luxury communities define Panama's lifestyle appeal.",
-    "label": "Safe Investment"
+    "stat1_label": "Asking Price",
+    "stat2_label": "Land Area",
+    "stat3_label": "To the beach",
+    "stat3_value": "5 min",
+    "stat4_label": "From Panama City",
+    "stat4_value": "~1h"
   },
   "lifestyle": {
     "label": "Lifestyle",
@@ -43,14 +56,22 @@
     "h2": "Private Communities",
     "h2_text": "Secure gated environments with luxury infrastructure.",
     "h3": "Long-Term Value",
-    "h3_text": "Strong appreciation driven by international demand."
+    "h3_text": "Strong appreciation driven by international demand.",
+    "status": "Status",
+    "status_value": "Under Renovation",
+    "delivery": "Est. delivery 2025"
   },
   "cta": {
     "label": "Investment Opportunity",
     "title": "Ready to Invest in\nPanama Real Estate?",
     "subtitle": "Contact our team for private viewings, exclusive listings, and personalized investment opportunities in Panama's most desirable coastal communities.",
     "primary": "Contact Private Agent",
-    "secondary": "Explore Properties"
+    "secondary": "Explore Properties",
+    "badge1_label": "First Property",
+    "badge2_value": "100%",
+    "badge2_label": "Privacy Guaranteed",
+    "badge3_value": "< 24h",
+    "badge3_label": "Response Time"
   },
   "property": {
     "for_sale": "For Sale",
@@ -81,11 +102,91 @@
     "nearby_golf": "Golf & Recreation",
     "nearby_golf_text": "Premium golf and recreational experiences nearby.",
     "nearby_essentials": "Essentials",
-    "nearby_essentials_text": "Restaurants, supermarkets, clinics and banking just minutes away."
+    "nearby_essentials_text": "Restaurants, supermarkets, clinics and banking just minutes away.",
+    "snapshot_beds": "Bedrooms",
+    "snapshot_baths": "Bathrooms",
+    "snapshot_build": "Construction",
+    "snapshot_lot": "Land Area",
+    "hero_price_label": "Price",
+    "hero_build_label": "Built",
+    "hero_lot_label": "Land",
+    "hero_specs_label": "Bed / Bath",
+    "hero_location": "Coronado · Las Quintas",
+    "hero_desc": "A private tropical residence undergoing transformation to elevate luxury living in Coronado.",
+    "status_badge": "Under Renovation · Coronado",
+    "gallery_label": "Visual Exploration",
+    "gallery_title": "Experience The Property",
+    "gallery_tab": "Gallery",
+    "ba_tab": "Before / After",
+    "ba_desc": "This property is undergoing a complete renovation to elevate the standard of living in Coronado. Drag the divider to compare the current state with the projected final design. After photos will be updated as construction progresses.",
+    "ba_progress_label": "Renovation Progress",
+    "ba_progress_status": "In Progress",
+    "ba_progress_start": "Start",
+    "ba_progress_pct": "35% complete",
+    "ba_progress_end": "Delivery",
+    "before": "Before",
+    "after": "After",
+    "after_soon": "After · Coming Soon",
+    "photos_available": "{{count}} photos available",
+    "contact_sent_msg": "Your email client opened with the message ready. You can also reach us directly on WhatsApp.",
+    "open_whatsapp": "Open WhatsApp",
+    "placeholder_name": "Full Name",
+    "placeholder_email": "Email Address",
+    "placeholder_phone": "Phone / WhatsApp (optional)",
+    "placeholder_message": "I'm interested in {{title}}. I'd like to know more about...",
+    "interested_in": "Inquiry: {{title}}"
   },
   "footer": {
     "nav_label": "Navigation",
     "contact_label": "Contact",
-    "tagline": "Luxury Real Estate Experience"
+    "tagline": "Luxury Real Estate Experience",
+    "whatsapp_btn": "☏ WhatsApp Us"
+  },
+  "about": {
+    "hero_label": "About Swiss Panama Realty",
+    "hero_title": "Real Estate Experts in Panama",
+    "hero_subtitle": "We specialize in luxury properties, investment opportunities, and coastal real estate across Panama's most exclusive areas.",
+    "vision_title": "Our Vision",
+    "vision_p1": "We believe Panama is one of the most strategic real estate markets in Latin America, offering stability, growth, and unmatched coastal lifestyle opportunities.",
+    "vision_p2": "Our mission is to connect international buyers with high-value properties that combine lifestyle and investment potential.",
+    "values_title": "Why Choose Us",
+    "v1_title": "Expertise",
+    "v1_text": "Deep knowledge of Panama's luxury real estate market.",
+    "v2_title": "Trust",
+    "v2_text": "Transparent and reliable investment guidance.",
+    "v3_title": "Access",
+    "v3_text": "Exclusive listings not available on public platforms.",
+    "cta_title": "Let's Find Your Property in Panama",
+    "cta_subtitle": "Contact us to discover exclusive listings and investment opportunities.",
+    "cta_btn": "Contact Us"
+  },
+  "contact": {
+    "hero_label": "Contact Us",
+    "hero_title": "Let's Talk About Your Next Property",
+    "hero_subtitle": "Whether you're looking to invest or find your dream home in Panama, our team is ready to guide you through every step.",
+    "section_title": "Get in Touch",
+    "section_subtitle": "We respond within 24 hours and provide personalized assistance for international buyers and investors.",
+    "email_label": "Email",
+    "phone_label": "Phone",
+    "location_label": "Location",
+    "trust_note": "We specialize in luxury properties and investment opportunities across Panama's coastal regions including Coronado, Playa Blanca, and Costa Esmeralda.",
+    "form_title": "Send a Message",
+    "placeholder_name": "Full Name",
+    "placeholder_email": "Email Address",
+    "placeholder_phone": "Phone (optional)",
+    "placeholder_message": "Tell us what you're looking for...",
+    "send_btn": "Send Inquiry",
+    "final_title": "Your Dream Property in Panama Awaits",
+    "final_subtitle": "Connect with our team and discover exclusive listings not available on public platforms."
+  },
+  "properties": {
+    "header_label": "Exclusive Listings",
+    "header_title": "Properties",
+    "header_subtitle": "Explore exclusive real estate opportunities in Panama's most desirable coastal and residential areas.",
+    "featured_label": "Featured Residence",
+    "available_label": "Available Properties",
+    "listings_count": "{{count}} listings",
+    "empty_title": "No listings available at this time.",
+    "empty_subtitle": "Check back soon for new properties."
   }
 }

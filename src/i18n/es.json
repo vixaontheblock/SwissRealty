@@ -10,7 +10,14 @@
     "title": "Bienes Raíces de Lujo\nen Panamá",
     "subtitle": "Propiedades exclusivas en Coronado y comunidades de estilo de vida premium.",
     "cta_primary": "Ver Propiedades",
-    "cta_secondary": "Contactar Agente"
+    "cta_secondary": "Contactar Agente",
+    "stat_price": "USD",
+    "stat_lot": "m² Lote",
+    "stat_build": "m² Const.",
+    "specs_beds": "Hab.",
+    "specs_baths": "Baños",
+    "specs_build": "Const.",
+    "specs_lot": "Lote"
   },
   "featured": {
     "label": "Listados Exclusivos",
@@ -20,6 +27,7 @@
     "view_all": "Ver Todas las Propiedades"
   },
   "why": {
+    "label": "Inversión Segura",
     "title": "Por qué Panamá",
     "subtitle": "Panamá combina estabilidad en dólares, ubicación estratégica y una fuerte apreciación inmobiliaria para inversores internacionales.",
     "card1_label": "Economía",
@@ -31,7 +39,12 @@
     "card3_label": "Estilo de Vida",
     "card3_title": "Vida Costera",
     "card3_text": "Clima tropical, playas, resorts de golf y comunidades de lujo definen el atractivo de vida en Panamá.",
-    "label": "Inversión Segura"
+    "stat1_label": "Precio de venta",
+    "stat2_label": "Área del lote",
+    "stat3_label": "A la playa",
+    "stat3_value": "5 min",
+    "stat4_label": "De Ciudad de Panamá",
+    "stat4_value": "~1h"
   },
   "lifestyle": {
     "label": "Estilo de Vida",
@@ -43,14 +56,22 @@
     "h2": "Comunidades Privadas",
     "h2_text": "Entornos cerrados y seguros con infraestructura de lujo.",
     "h3": "Valor a Largo Plazo",
-    "h3_text": "Fuerte apreciación impulsada por la demanda internacional."
+    "h3_text": "Fuerte apreciación impulsada por la demanda internacional.",
+    "status": "Estado",
+    "status_value": "En Remodelación",
+    "delivery": "Entrega estimada 2025"
   },
   "cta": {
     "label": "Oportunidad de Inversión",
     "title": "¿Listo para Invertir en\nBienes Raíces en Panamá?",
     "subtitle": "Contáctenos para visitas privadas, listados exclusivos y oportunidades de inversión personalizadas en las comunidades costeras más deseadas.",
     "primary": "Contactar Agente Privado",
-    "secondary": "Ver Propiedades"
+    "secondary": "Ver Propiedades",
+    "badge1_label": "Primera Propiedad",
+    "badge2_value": "100%",
+    "badge2_label": "Privacidad Garantizada",
+    "badge3_value": "< 24h",
+    "badge3_label": "Tiempo de Respuesta"
   },
   "property": {
     "for_sale": "En Venta",
@@ -81,11 +102,91 @@
     "nearby_golf": "Golf y Recreación",
     "nearby_golf_text": "Experiencias de golf y recreación premium cerca.",
     "nearby_essentials": "Servicios Esenciales",
-    "nearby_essentials_text": "Restaurantes, supermercados, clínicas y bancos a minutos."
+    "nearby_essentials_text": "Restaurantes, supermercados, clínicas y bancos a minutos.",
+    "snapshot_beds": "Habitaciones",
+    "snapshot_baths": "Baños",
+    "snapshot_build": "Construcción",
+    "snapshot_lot": "Área del Lote",
+    "hero_price_label": "Precio",
+    "hero_build_label": "Construcción",
+    "hero_lot_label": "Lote",
+    "hero_specs_label": "Hab. / Baños",
+    "hero_location": "Coronado · Las Quintas",
+    "hero_desc": "Residencia privada tropical en transformación para elevar el estándar de vida en Coronado.",
+    "status_badge": "En Remodelación · Coronado",
+    "gallery_label": "Exploración Visual",
+    "gallery_title": "Conoce la Propiedad",
+    "gallery_tab": "Galería",
+    "ba_tab": "Antes / Después",
+    "ba_desc": "Esta propiedad está siendo completamente remodelada para elevar el estándar de vida en Coronado. Arrastra el divisor para comparar el estado actual con el diseño final proyectado. Las fotos «Después» se irán actualizando conforme avance la obra.",
+    "ba_progress_label": "Avance de Remodelación",
+    "ba_progress_status": "En Proceso",
+    "ba_progress_start": "Inicio",
+    "ba_progress_pct": "35% completado",
+    "ba_progress_end": "Entrega",
+    "before": "Antes",
+    "after": "Después",
+    "after_soon": "Después · Próximamente",
+    "photos_available": "{{count}} fotos disponibles",
+    "contact_sent_msg": "Tu cliente de correo se abrió con el mensaje listo. También puedes contactarnos directamente por WhatsApp.",
+    "open_whatsapp": "Abrir WhatsApp",
+    "placeholder_name": "Nombre Completo",
+    "placeholder_email": "Correo Electrónico",
+    "placeholder_phone": "Teléfono / WhatsApp (opcional)",
+    "placeholder_message": "Estoy interesado en {{title}}. Me gustaría saber más sobre...",
+    "interested_in": "Consulta: {{title}}"
   },
   "footer": {
     "nav_label": "Navegación",
     "contact_label": "Contacto",
-    "tagline": "Experiencia Inmobiliaria de Lujo"
+    "tagline": "Experiencia Inmobiliaria de Lujo",
+    "whatsapp_btn": "☏ Escríbenos por WhatsApp"
+  },
+  "about": {
+    "hero_label": "Sobre Swiss Panama Realty",
+    "hero_title": "Expertos Inmobiliarios en Panamá",
+    "hero_subtitle": "Nos especializamos en propiedades de lujo, oportunidades de inversión y bienes raíces costeros en las áreas más exclusivas de Panamá.",
+    "vision_title": "Nuestra Visión",
+    "vision_p1": "Creemos que Panamá es uno de los mercados inmobiliarios más estratégicos de Latinoamérica, ofreciendo estabilidad, crecimiento y un estilo de vida costero incomparable.",
+    "vision_p2": "Nuestra misión es conectar a compradores internacionales con propiedades de alto valor que combinan estilo de vida y potencial de inversión.",
+    "values_title": "Por Qué Elegirnos",
+    "v1_title": "Experiencia",
+    "v1_text": "Conocimiento profundo del mercado inmobiliario de lujo en Panamá.",
+    "v2_title": "Confianza",
+    "v2_text": "Orientación de inversión transparente y confiable.",
+    "v3_title": "Acceso",
+    "v3_text": "Listados exclusivos no disponibles en plataformas públicas.",
+    "cta_title": "Encontremos Tu Propiedad en Panamá",
+    "cta_subtitle": "Contáctanos para descubrir listados exclusivos y oportunidades de inversión.",
+    "cta_btn": "Contactar"
+  },
+  "contact": {
+    "hero_label": "Contáctanos",
+    "hero_title": "Hablemos de Tu Próxima Propiedad",
+    "hero_subtitle": "Tanto si buscas invertir como encontrar tu hogar ideal en Panamá, nuestro equipo está listo para acompañarte en cada paso.",
+    "section_title": "Ponte en Contacto",
+    "section_subtitle": "Respondemos en 24 horas y brindamos asistencia personalizada a compradores e inversores internacionales.",
+    "email_label": "Correo",
+    "phone_label": "Teléfono",
+    "location_label": "Ubicación",
+    "trust_note": "Nos especializamos en propiedades de lujo y oportunidades de inversión en las regiones costeras de Panamá, incluyendo Coronado, Playa Blanca y Costa Esmeralda.",
+    "form_title": "Enviar Mensaje",
+    "placeholder_name": "Nombre Completo",
+    "placeholder_email": "Correo Electrónico",
+    "placeholder_phone": "Teléfono (opcional)",
+    "placeholder_message": "Cuéntanos qué estás buscando...",
+    "send_btn": "Enviar Consulta",
+    "final_title": "Tu Propiedad Ideal en Panamá te Espera",
+    "final_subtitle": "Conéctate con nuestro equipo y descubre listados exclusivos no disponibles en plataformas públicas."
+  },
+  "properties": {
+    "header_label": "Listados Exclusivos",
+    "header_title": "Propiedades",
+    "header_subtitle": "Explora oportunidades inmobiliarias exclusivas en las zonas costeras y residenciales más deseadas de Panamá.",
+    "featured_label": "Residencia Destacada",
+    "available_label": "Propiedades Disponibles",
+    "listings_count": "{{count}} listados",
+    "empty_title": "No hay listados disponibles en este momento.",
+    "empty_subtitle": "Vuelve pronto para nuevas propiedades."
   }
 }
