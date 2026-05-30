@@ -20,11 +20,12 @@ function Navbar() {
 
   return (
     <>
-      {/* HEADER */}
+      {/* TOP BAR */}
       <header className="fixed top-0 left-0 w-full z-50">
-        <div className="bg-white/60 backdrop-blur-xl border-b border-neutral-200">
+        <div className="bg-white/60 backdrop-blur-2xl border-b border-white/20">
           <div className="max-w-7xl mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
 
+            {/* BRAND */}
             <Link
               to="/"
               className="tracking-[0.35em] uppercase text-sm font-light"
@@ -49,21 +50,21 @@ function Navbar() {
               ))}
             </div>
 
-            {/* HAMBURGER */}
+            {/* HAMBURGER (iOS STYLE MORPH) */}
             <button
               onClick={() => setOpen(true)}
-              className="md:hidden flex flex-col gap-[5px]"
+              className="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-[5px]"
             >
-              <span className="w-6 h-[1px] bg-black"></span>
-              <span className="w-6 h-[1px] bg-black"></span>
-              <span className="w-6 h-[1px] bg-black"></span>
+              <span className={`w-6 h-[1px] bg-black transition ${open ? "rotate-45 translate-y-[6px]" : ""}`} />
+              <span className={`w-6 h-[1px] bg-black transition ${open ? "opacity-0" : ""}`} />
+              <span className={`w-6 h-[1px] bg-black transition ${open ? "-rotate-45 -translate-y-[6px]" : ""}`} />
             </button>
 
           </div>
         </div>
       </header>
 
-      {/* BACKDROP (GLASS + ANIMATION REAL) */}
+      {/* BACKDROP (iOS BLUR LAYER) */}
       <div
         onClick={() => setOpen(false)}
         className={`
@@ -72,59 +73,66 @@ function Navbar() {
 
           ${
             open
-              ? "opacity-100 backdrop-blur-sm bg-black/30"
+              ? "opacity-100 backdrop-blur-md bg-black/30"
               : "opacity-0 pointer-events-none backdrop-blur-0 bg-black/0"
           }
         `}
       />
 
-      {/* GLASS MENU */}
-      <div
+      {/* iOS GLASS PANEL */}
+      <aside
         className={`
-          fixed top-0 right-0 h-full w-[82%] max-w-sm z-50
+          fixed top-0 right-0 h-full w-[85%] max-w-sm z-50
 
-          flex flex-col gap-8 p-10
+          flex flex-col justify-center gap-8 px-10
 
           border-l border-white/20
           shadow-2xl
 
-          transition-all duration-500 ease-out
+          transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
 
           ${
             open
-              ? "translate-x-0 bg-white/70 backdrop-blur-2xl"
+              ? "translate-x-0 bg-white/70 backdrop-blur-3xl"
               : "translate-x-full bg-white/0 backdrop-blur-0"
           }
         `}
       >
 
-        {/* CLOSE */}
+        {/* CLOSE BUTTON */}
         <button
           onClick={() => setOpen(false)}
-          className="self-end text-xs uppercase tracking-[0.25em] text-neutral-500 hover:text-black transition"
+          className="absolute top-6 right-6 text-xs uppercase tracking-[0.25em] text-neutral-400 hover:text-black transition"
         >
           Close
         </button>
 
-        {/* LINKS */}
-        <div className="flex flex-col gap-6 mt-6">
-          {links.map((link) => (
+        {/* LINKS (STAGGER ANIMATION) */}
+        <nav className="flex flex-col gap-7">
+          {links.map((link, i) => (
             <Link
               key={link.to}
               to={link.to}
               onClick={() => setOpen(false)}
-              className={`text-sm uppercase tracking-[0.2em] transition ${
-                isActive(link.to)
-                  ? "text-black"
-                  : "text-neutral-400 hover:text-black"
-              }`}
+              className={`
+                text-xl uppercase tracking-[0.25em]
+                transition-all duration-500 ease-out
+
+                ${open ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}
+
+                hover:text-black
+                ${isActive(link.to) ? "text-black" : "text-neutral-400"}
+              `}
+              style={{
+                transitionDelay: open ? `${i * 70}ms` : "0ms",
+              }}
             >
               {link.label}
             </Link>
           ))}
-        </div>
+        </nav>
 
-      </div>
+      </aside>
     </>
   );
 }
