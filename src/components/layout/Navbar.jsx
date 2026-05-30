@@ -1,98 +1,94 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "./LanguageSwitcher";
 
 function Navbar() {
   const location = useLocation();
-  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
 
   const isActive = (path) => location.pathname === path;
 
-  const navItems = [
-    { path: "/", label: t("nav.home") },
-    { path: "/properties", label: t("nav.properties") },
-    { path: "/about", label: t("nav.about") },
-    { path: "/contact", label: t("nav.contact") },
+  const links = [
+    { to: "/", label: "Home" },
+    { to: "/properties", label: "Properties" },
+    { to: "/about", label: "About" },
+    { to: "/contact", label: "Contact" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-neutral-200">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-4 md:py-5 flex items-center justify-between">
+    <>
+      {/* TOP BAR */}
+      <header className="fixed top-0 left-0 w-full z-50">
+        <div className="backdrop-blur-xl bg-white/70 border-b border-neutral-200">
 
-        {/* BRAND */}
-        <Link
-          to="/"
-          className="text-lg md:text-xl tracking-[0.2em] font-light uppercase"
-        >
-          Swiss Panama Realty
-        </Link>
+          <div className="max-w-7xl mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
 
-        {/* DESKTOP NAV */}
-        <div className="hidden md:flex items-center gap-10 text-xs uppercase tracking-[3px]">
-          {navItems.map((item) => (
+            {/* BRAND */}
             <Link
-              key={item.path}
-              to={item.path}
-              className={`relative transition ${
-                isActive(item.path)
-                  ? "text-neutral-900"
-                  : "text-neutral-500"
-              }`}
+              to="/"
+              className="text-sm md:text-base tracking-[0.35em] uppercase font-light"
             >
-              {item.label}
-
-              <span
-                className={`absolute left-0 -bottom-2 h-[1px] bg-black transition-all ${
-                  isActive(item.path) ? "w-full" : "w-0"
-                }`}
-              />
+              Swiss Panama Realty
             </Link>
-          ))}
+
+            {/* DESKTOP LINKS */}
+            <div className="hidden md:flex gap-12 text-xs tracking-[0.25em] uppercase">
+              {links.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className={`relative transition ${
+                    isActive(link.to)
+                      ? "text-black"
+                      : "text-neutral-400 hover:text-black"
+                  }`}
+                >
+                  {link.label}
+
+                  <span
+                    className={`absolute left-0 -bottom-2 h-[1px] bg-black transition-all ${
+                      isActive(link.to) ? "w-full" : "w-0"
+                    }`}
+                  />
+                </Link>
+              ))}
+            </div>
+
+            {/* MOBILE BUTTON */}
+            <button
+              onClick={() => setOpen(!open)}
+              className="md:hidden flex flex-col gap-[5px]"
+            >
+              <span className="w-6 h-[1px] bg-black"></span>
+              <span className="w-6 h-[1px] bg-black"></span>
+              <span className="w-6 h-[1px] bg-black"></span>
+            </button>
+
+          </div>
         </div>
+      </header>
 
-        {/* RIGHT SIDE */}
-        <div className="flex items-center gap-3">
-
-          {/* LANGUAGE (desktop + mobile) */}
-          <LanguageSwitcher />
-
-          {/* MOBILE BUTTON */}
-          <button
-            className="md:hidden flex flex-col gap-1"
-            onClick={() => setOpen(!open)}
-          >
-            <span className="w-5 h-[1px] bg-black"></span>
-            <span className="w-5 h-[1px] bg-black"></span>
-            <span className="w-5 h-[1px] bg-black"></span>
-          </button>
-
-        </div>
-      </div>
-
-      {/* MOBILE MENU */}
+      {/* MOBILE PANEL */}
       {open && (
-        <div className="md:hidden bg-white border-t border-neutral-200 px-6 py-6 space-y-6">
+        <div className="fixed inset-0 z-40 bg-white flex flex-col justify-center items-center gap-10">
 
-          {navItems.map((item) => (
+          {links.map((link) => (
             <Link
-              key={item.path}
-              to={item.path}
+              key={link.to}
+              to={link.to}
               onClick={() => setOpen(false)}
-              className={`block text-sm uppercase tracking-[2px] ${
-                isActive(item.path)
+              className={`text-lg tracking-[0.25em] uppercase ${
+                isActive(link.to)
                   ? "text-black"
-                  : "text-neutral-500"
+                  : "text-neutral-400"
               }`}
             >
-              {item.label}
+              {link.label}
             </Link>
           ))}
 
         </div>
       )}
-    </nav>
+    </>
   );
 }
 
