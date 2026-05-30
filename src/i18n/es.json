@@ -6,18 +6,85 @@
     "contact": "Contacto"
   },
   "hero": {
-    "title": "Bienes Raíces de Lujo en Panamá",
-    "subtitle": "Propiedades exclusivas para compradores internacionales"
+    "label": "Swiss Panama Realty",
+    "title": "Bienes Raíces de Lujo\nen Panamá",
+    "subtitle": "Propiedades exclusivas en Coronado y comunidades de estilo de vida premium.",
+    "cta_primary": "Ver Propiedades",
+    "cta_secondary": "Contactar Agente"
+  },
+  "featured": {
+    "label": "Listados Exclusivos",
+    "title": "Propiedades Destacadas",
+    "subtitle": "Residencias de lujo seleccionadas en las áreas más exclusivas de Panamá.",
+    "featured_label": "Residencia Destacada",
+    "view_all": "Ver Todas las Propiedades"
+  },
+  "why": {
+    "title": "Por qué Panamá",
+    "subtitle": "Panamá combina estabilidad en dólares, ubicación estratégica y una fuerte apreciación inmobiliaria para inversores internacionales.",
+    "card1_label": "Economía",
+    "card1_title": "Estabilidad en Dólares",
+    "card1_text": "Panamá utiliza el dólar estadounidense, eliminando el riesgo cambiario y ofreciendo estabilidad financiera predecible.",
+    "card2_label": "Inversión",
+    "card2_title": "Alto Retorno",
+    "card2_text": "Los bienes raíces en zonas costeras continúan creciendo con alta demanda de compradores internacionales.",
+    "card3_label": "Estilo de Vida",
+    "card3_title": "Vida Costera",
+    "card3_text": "Clima tropical, playas, resorts de golf y comunidades de lujo definen el atractivo de vida en Panamá."
+  },
+  "lifestyle": {
+    "label": "Estilo de Vida",
+    "title": "Vida Costera,\nReinventada en Panamá",
+    "text1": "Viva frente al mar en la costa pacífica de Panamá, donde la naturaleza tropical, la privacidad y la arquitectura moderna se fusionan en un estilo de vida costero refinado.",
+    "text2": "Diseñado para compradores internacionales que buscan valor de inversión y una vida de mayor calidad.",
+    "h1": "Acceso al Océano",
+    "h1_text": "Acceso directo a playas vírgenes y reservas naturales costeras.",
+    "h2": "Comunidades Privadas",
+    "h2_text": "Entornos cerrados y seguros con infraestructura de lujo.",
+    "h3": "Valor a Largo Plazo",
+    "h3_text": "Fuerte apreciación impulsada por la demanda internacional."
   },
   "cta": {
-    "contact": "Contáctanos"
+    "label": "Oportunidad de Inversión",
+    "title": "¿Listo para Invertir en\nBienes Raíces en Panamá?",
+    "subtitle": "Contáctenos para visitas privadas, listados exclusivos y oportunidades de inversión personalizadas en las comunidades costeras más deseadas.",
+    "primary": "Contactar Agente Privado",
+    "secondary": "Ver Propiedades"
   },
-  "about": {
-    "title": "Expertos en Bienes Raíces en Panamá",
-    "text": "Nos especializamos en propiedades de lujo y oportunidades de inversión en Panamá."
+  "property": {
+    "for_sale": "En Venta",
+    "renovation": "En Remodelación",
+    "sold": "Vendida",
+    "beds": "Hab.",
+    "baths": "Baños",
+    "explore": "Explorar Propiedad",
+    "consult": "Solicitar Consulta",
+    "description_label": "Descripción",
+    "features_label": "Amenidades y Características",
+    "nearby_label": "Qué Hay Cerca",
+    "nearby_subtitle": "La propiedad está idealmente ubicada en Coronado, rodeada de servicios esenciales, opciones de ocio y atractivos costeros naturales.",
+    "tour_label": "Experiencia Virtual",
+    "tour_title": "Tour Virtual 360°",
+    "tour_soon": "Tour 360° — Próximamente",
+    "drone_soon": "Video Drone Aéreo — Próximamente",
+    "map_label": "Ubicación Privilegiada",
+    "details_label": "Detalles de la Propiedad",
+    "contact_title": "Solicitar Información",
+    "contact_subtitle": "Programe una visita privada o reciba más detalles sobre esta propiedad en Coronado. Nuestro equipo responde en menos de 24 horas.",
+    "send": "Enviar Solicitud",
+    "whatsapp": "WhatsApp",
+    "open_gmaps": "Abrir Google Maps",
+    "open_amaps": "Abrir Apple Maps",
+    "nearby_beach": "Acceso a la Playa",
+    "nearby_beach_text": "A minutos de la costa pacífica de Coronado.",
+    "nearby_golf": "Golf y Recreación",
+    "nearby_golf_text": "Experiencias de golf y recreación premium cerca.",
+    "nearby_essentials": "Servicios Esenciales",
+    "nearby_essentials_text": "Restaurantes, supermercados, clínicas y bancos a minutos."
   },
-  "contact": {
-    "title": "Hablemos de tu próxima propiedad",
-    "subtitle": "Respondemos en menos de 24 horas con atención personalizada."
+  "footer": {
+    "nav_label": "Navegación",
+    "contact_label": "Contacto",
+    "tagline": "Experiencia Inmobiliaria de Lujo"
   }
 }

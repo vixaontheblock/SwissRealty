@@ -6,18 +6,85 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Luxury Real Estate in Panama",
-    "subtitle": "Exclusive properties for international buyers"
+    "label": "Swiss Panama Realty",
+    "title": "Luxury Real Estate\nin Panama",
+    "subtitle": "Exclusive coastal properties in Coronado and premium lifestyle communities.",
+    "cta_primary": "Explore Properties",
+    "cta_secondary": "Contact Agent"
+  },
+  "featured": {
+    "label": "Exclusive Listings",
+    "title": "Featured Properties",
+    "subtitle": "Handpicked luxury homes in Panama's most exclusive areas.",
+    "featured_label": "Featured Residence",
+    "view_all": "View All Properties"
+  },
+  "why": {
+    "title": "Why Panama",
+    "subtitle": "Panama combines dollar stability, strategic location, and strong real estate appreciation for international investors.",
+    "card1_label": "Economy",
+    "card1_title": "Dollar Stability",
+    "card1_text": "Panama uses the US dollar, eliminating currency risk and offering predictable financial stability for investors.",
+    "card2_label": "Investment",
+    "card2_title": "Strong ROI Growth",
+    "card2_text": "Real estate in coastal areas continues to grow with high demand from international buyers and expats.",
+    "card3_label": "Lifestyle",
+    "card3_title": "Coastal Living",
+    "card3_text": "Tropical climate, beaches, golf resorts and luxury communities define Panama's lifestyle appeal."
+  },
+  "lifestyle": {
+    "label": "Lifestyle",
+    "title": "Coastal Living,\nRedefined in Panama",
+    "text1": "Experience beachfront living on Panama's Pacific coast, where tropical nature, privacy, and modern architecture blend into a refined coastal lifestyle.",
+    "text2": "Designed for international buyers seeking both investment value and a slower, higher-quality way of life.",
+    "h1": "Ocean Access",
+    "h1_text": "Direct access to pristine beaches and coastal nature reserves.",
+    "h2": "Private Communities",
+    "h2_text": "Secure gated environments with luxury infrastructure.",
+    "h3": "Long-Term Value",
+    "h3_text": "Strong appreciation driven by international demand."
   },
   "cta": {
-    "contact": "Contact Us"
+    "label": "Investment Opportunity",
+    "title": "Ready to Invest in\nPanama Real Estate?",
+    "subtitle": "Contact our team for private viewings, exclusive listings, and personalized investment opportunities in Panama's most desirable coastal communities.",
+    "primary": "Contact Private Agent",
+    "secondary": "Explore Properties"
   },
-  "about": {
-    "title": "Real Estate Experts in Panama",
-    "text": "We specialize in luxury properties and investment opportunities across Panama."
+  "property": {
+    "for_sale": "For Sale",
+    "renovation": "Under Renovation",
+    "sold": "Sold",
+    "beds": "Beds",
+    "baths": "Baths",
+    "explore": "Explore Property",
+    "consult": "Request Consultation",
+    "description_label": "Description",
+    "features_label": "Amenities & Features",
+    "nearby_label": "What's Nearby",
+    "nearby_subtitle": "The property is ideally located in Coronado, surrounded by essential services, leisure options, and natural coastal attractions.",
+    "tour_label": "Virtual Experience",
+    "tour_title": "360° Property Tour",
+    "tour_soon": "360° Tour — Coming Soon",
+    "drone_soon": "Aerial Drone Video — Coming Soon",
+    "map_label": "Prime Location",
+    "details_label": "Property Details",
+    "contact_title": "Request Information",
+    "contact_subtitle": "Schedule a private viewing or receive more details about this property in Coronado. Our team responds within 24 hours.",
+    "send": "Send Request",
+    "whatsapp": "WhatsApp",
+    "open_gmaps": "Open Google Maps",
+    "open_amaps": "Open Apple Maps",
+    "nearby_beach": "Beach Access",
+    "nearby_beach_text": "Minutes away from Coronado's Pacific coastline.",
+    "nearby_golf": "Golf & Recreation",
+    "nearby_golf_text": "Premium golf and recreational experiences nearby.",
+    "nearby_essentials": "Essentials",
+    "nearby_essentials_text": "Restaurants, supermarkets, clinics and banking just minutes away."
   },
-  "contact": {
-    "title": "Let’s Talk About Your Next Property",
-    "subtitle": "We respond within 24 hours with personalized assistance."
+  "footer": {
+    "nav_label": "Navigation",
+    "contact_label": "Contact",
+    "tagline": "Luxury Real Estate Experience"
   }
 }

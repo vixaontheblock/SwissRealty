@@ -6,18 +6,85 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "title": "Luxusimmobilien in Panama",
-    "subtitle": "Exklusive Immobilien für internationale Käufer"
+    "label": "Swiss Panama Realty",
+    "title": "Luxusimmobilien\nin Panama",
+    "subtitle": "Exklusive Küstenimmobilien in Coronado und erstklassigen Lifestyle-Gemeinschaften.",
+    "cta_primary": "Immobilien ansehen",
+    "cta_secondary": "Makler kontaktieren"
+  },
+  "featured": {
+    "label": "Exklusive Angebote",
+    "title": "Ausgewählte Immobilien",
+    "subtitle": "Handverlesene Luxushäuser in Panamas exklusivsten Lagen.",
+    "featured_label": "Empfohlene Residenz",
+    "view_all": "Alle Immobilien ansehen"
+  },
+  "why": {
+    "title": "Warum Panama",
+    "subtitle": "Panama vereint Dollarstabilität, strategische Lage und starke Immobilienwertsteigerung für internationale Investoren.",
+    "card1_label": "Wirtschaft",
+    "card1_title": "Dollarstabilität",
+    "card1_text": "Panama verwendet den US-Dollar, eliminiert das Währungsrisiko und bietet vorhersehbare finanzielle Stabilität.",
+    "card2_label": "Investment",
+    "card2_title": "Hohe Rendite",
+    "card2_text": "Immobilien in Küstengebieten wachsen weiterhin mit hoher Nachfrage internationaler Käufer.",
+    "card3_label": "Lebensstil",
+    "card3_title": "Küstenleben",
+    "card3_text": "Tropisches Klima, Strände, Golfresorts und Luxusgemeinschaften prägen Panamas Lifestyle-Appeal."
+  },
+  "lifestyle": {
+    "label": "Lebensstil",
+    "title": "Küstenleben,\nNeu Definiert in Panama",
+    "text1": "Erleben Sie das Leben am Meer an Panamas Pazifikküste, wo tropische Natur, Privatsphäre und moderne Architektur zu einem verfeinerten Küstenlebensstil verschmelzen.",
+    "text2": "Für internationale Käufer konzipiert, die sowohl Investitionswert als auch eine hochwertige Lebensweise suchen.",
+    "h1": "Meereszugang",
+    "h1_text": "Direkter Zugang zu unberührten Stränden und Küstennaturreservaten.",
+    "h2": "Private Gemeinschaften",
+    "h2_text": "Sichere Gated Communities mit Luxusinfrastruktur.",
+    "h3": "Langfristiger Wert",
+    "h3_text": "Starke Wertsteigerung durch internationale Nachfrage."
   },
   "cta": {
-    "contact": "Kontaktieren Sie uns"
+    "label": "Investitionsmöglichkeit",
+    "title": "Bereit in Panama\nImmobilien zu investieren?",
+    "subtitle": "Kontaktieren Sie unser Team für private Besichtigungen, exklusive Angebote und personalisierte Investitionsmöglichkeiten in Panamas begehrtesten Küstengemeinschaften.",
+    "primary": "Privaten Makler kontaktieren",
+    "secondary": "Immobilien ansehen"
   },
-  "about": {
-    "title": "Immobilienexperten in Panama",
-    "text": "Wir spezialisieren uns auf Luxusimmobilien und Investitionsmöglichkeiten in Panama."
+  "property": {
+    "for_sale": "Zu verkaufen",
+    "renovation": "In Renovierung",
+    "sold": "Verkauft",
+    "beds": "Zimmer",
+    "baths": "Bäder",
+    "explore": "Immobilie erkunden",
+    "consult": "Beratung anfragen",
+    "description_label": "Beschreibung",
+    "features_label": "Ausstattung & Merkmale",
+    "nearby_label": "Was ist in der Nähe",
+    "nearby_subtitle": "Die Immobilie liegt ideal in Coronado, umgeben von wichtigen Dienstleistungen, Freizeitangeboten und natürlichen Küstenattraktion.",
+    "tour_label": "Virtuelle Erfahrung",
+    "tour_title": "360° Immobilientour",
+    "tour_soon": "360° Tour — Demnächst verfügbar",
+    "drone_soon": "Drohnen-Luftvideo — Demnächst verfügbar",
+    "map_label": "Erstklassige Lage",
+    "details_label": "Immobiliendetails",
+    "contact_title": "Informationen anfordern",
+    "contact_subtitle": "Vereinbaren Sie eine private Besichtigung oder erhalten Sie weitere Details zu dieser Immobilie in Coronado. Unser Team antwortet innerhalb von 24 Stunden.",
+    "send": "Anfrage senden",
+    "whatsapp": "WhatsApp",
+    "open_gmaps": "Google Maps öffnen",
+    "open_amaps": "Apple Maps öffnen",
+    "nearby_beach": "Strandzugang",
+    "nearby_beach_text": "Minuten von Coronados Pazifikküste entfernt.",
+    "nearby_golf": "Golf & Freizeit",
+    "nearby_golf_text": "Erstklassige Golf- und Freizeiterlebnisse in der Nähe.",
+    "nearby_essentials": "Grundversorgung",
+    "nearby_essentials_text": "Restaurants, Supermärkte, Kliniken und Banken in wenigen Minuten."
   },
-  "contact": {
-    "title": "Lassen Sie uns über Ihre nächste Immobilie sprechen",
-    "subtitle": "Wir antworten innerhalb von 24 Stunden."
+  "footer": {
+    "nav_label": "Navigation",
+    "contact_label": "Kontakt",
+    "tagline": "Luxus-Immobilienerfahrung"
   }
 }

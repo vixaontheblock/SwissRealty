@@ -55,7 +55,7 @@ function Footer() {
               className="inline-block mt-2 text-xs uppercase tracking-[0.2em] border border-neutral-200
                 px-4 py-2.5 rounded-full hover:bg-black hover:text-white hover:border-black transition"
             >
-              💬 WhatsApp Us
+              ☏ WhatsApp Us
             </a>
           </div>
 
