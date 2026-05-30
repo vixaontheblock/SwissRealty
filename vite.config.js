@@ -7,4 +7,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: "/", // 🔥 IMPORTANTE PARA VERCEL + ROUTING
 });
