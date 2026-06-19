@@ -3,20 +3,20 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 // Renders — los archivos deben existir en src/assets/properties/las-quintas/renders/
-import rFrontal        from "../../assets/properties/las-quintas/renders/render-frontal.jpg";
-import rTrasero        from "../../assets/properties/las-quintas/renders/render-trasero.jpg";
-import rCocinaFrontal  from "../../assets/properties/las-quintas/renders/render-cocina-frontal.jpg";
-import rCocinaMuebles  from "../../assets/properties/las-quintas/renders/render-cocina-muebles.jpg";
-import rCocinaExterior from "../../assets/properties/las-quintas/renders/render-cocina-exterior.jpg";
-import rBano           from "../../assets/properties/las-quintas/renders/render-bano.jpg";
+import renderFrontal from "../../assets/properties/las-quintas/renders/render-frontal.png";
+import renderTrasero from "../../assets/properties/las-quintas/renders/render-trasero.png";
+import renderCocinaFrontal from "../../assets/properties/las-quintas/renders/render-cocina-frontal.png";
+import renderCocinaMuebles from "../../assets/properties/las-quintas/renders/render-cocina-muebles.png";
+import renderCocinaExterior from "../../assets/properties/las-quintas/renders/render-cocina-exterior.png";
+import renderBano from "../../assets/properties/las-quintas/renders/render-bano.png";
 
-const RENDERS = [
-  { src: rFrontal,        title: "Fachada Frontal",       caption: "Acceso principal y volumetría",         span: "col-span-12 md:col-span-8 md:row-span-2 aspect-[16/10] md:aspect-auto" },
-  { src: rTrasero,        title: "Fachada Trasera",       caption: "Integración con el jardín tropical",     span: "col-span-12 md:col-span-4 aspect-[4/3]" },
-  { src: rCocinaFrontal,  title: "Cocina — Vista Frontal",caption: "Isla central y zona de preparación",     span: "col-span-12 md:col-span-4 aspect-[4/3]" },
-  { src: rCocinaMuebles,  title: "Cocina — Muebles",      caption: "Carpintería a medida en tonos cálidos",  span: "col-span-12 md:col-span-6 aspect-[4/3]" },
-  { src: rCocinaExterior, title: "Cocina hacia Exterior", caption: "Continuidad indoor-outdoor",             span: "col-span-12 md:col-span-6 aspect-[4/3]" },
-  { src: rBano,           title: "Baño Principal",        caption: "Materiales naturales y luz cenital",     span: "col-span-12 md:col-span-12 aspect-[21/9]" },
+const renders = [
+  { src: renderFrontal,         title: "Fachada frontal",      caption: "Vista principal de acceso",   span: "col-span-12 md:col-span-7 aspect-[4/3]" },
+  { src: renderTrasero,         title: "Fachada trasera",      caption: "Jardín y área de piscina",     span: "col-span-12 md:col-span-5 aspect-[4/3]" },
+  { src: renderCocinaFrontal,   title: "Cocina · Vista frontal", caption: "Isla central y acabados",    span: "col-span-6 md:col-span-4 aspect-square" },
+  { src: renderCocinaMuebles,   title: "Cocina · Mobiliario",  caption: "Almacenamiento integrado",     span: "col-span-6 md:col-span-4 aspect-square" },
+  { src: renderCocinaExterior,  title: "Cocina hacia exterior", caption: "Conexión con el jardín",      span: "col-span-12 md:col-span-4 aspect-square" },
+  { src: renderBano,            title: "Baño principal",       caption: "Spa privado en suite",         span: "col-span-12 aspect-[16/9]" },
 ];
 
 export default function RenderShowcase() {
@@ -60,7 +60,7 @@ export default function RenderShowcase() {
 
         {/* Grid editorial */}
         <div className="grid grid-cols-12 gap-3 md:gap-5">
-          {RENDERS.map((r, i) => (
+          {renders.map((r, i) => (
             <RenderCard
               key={r.title}
               render={r}
