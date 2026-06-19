@@ -7,6 +7,8 @@ import Footer              from "../components/layout/Footer";
 import PropertyHero        from "../components/property/PropertyHero";
 import PropertySnapshot    from "../components/property/PropertySnapshot";
 import PropertyOverview    from "../components/property/PropertyOverview";
+import TransformationVision from "../components/property/TransformationVision";
+import RenderShowcase      from "../components/property/RenderShowcase";
 import PropertyDescription from "../components/property/PropertyDescription";
 import PropertyGallery     from "../components/property/PropertyGallery";
 import PropertyFeatures    from "../components/property/PropertyFeatures";
@@ -17,11 +19,10 @@ import VirtualTour         from "../components/property/VirtualTour";
 import PropertyContactForm from "../components/property/PropertyContactForm";
 import FloatingContact     from "../components/common/FloatingContact";
 
-function PropertyDetail() {
+export default function PropertyDetail() {
   const { id } = useParams();
   const property = properties.find((p) => p.slug === id || p.id === id);
 
-  // Scroll to top on load
   useEffect(() => { window.scrollTo(0, 0); }, [id]);
 
   if (!property) {
@@ -39,17 +40,33 @@ function PropertyDetail() {
     );
   }
 
+  // Solo mostrar renders si la propiedad los tiene (las-quintas por ahora)
+  const showRenders = property.slug === "las-quintas" || property.id === "las-quintas";
+
   return (
     <>
       <Navbar />
       <main>
+        {/* 1. Identidad */}
         <PropertyHero        property={property} />
         <PropertySnapshot    property={property} />
         <PropertyOverview    property={property} />
+
+        {/* 2. Visión a futuro (renders) */}
+        {showRenders && (
+          <>
+            <TransformationVision />
+            <RenderShowcase />
+          </>
+        )}
+
+        {/* 3. Estado actual y detalles */}
         <PropertyDescription property={property} />
         <PropertyGallery     property={property} />
         <PropertyFeatures    property={property} />
         <VirtualTour         property={property} />
+
+        {/* 4. Contexto y conversión */}
         <PropertyNearby      property={property} />
         <PropertyMap         property={property} />
         <PropertyDetailsTable property={property} />
@@ -60,5 +77,3 @@ function PropertyDetail() {
     </>
   );
 }
-
-export default PropertyDetail;
