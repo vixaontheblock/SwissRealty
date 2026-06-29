@@ -33,11 +33,10 @@ function Footer() {
           {/* NAV */}
           <div className="flex flex-col gap-3 text-sm">
             <span className="text-xs uppercase tracking-[0.3em] text-neutral-400 mb-1">
-              {t("nav.home").replace("Home","") || "Navigation"}
+              Navigation
             </span>
             {navLinks.map(({ to, label }) => (
-              <Link key={to} to={to}
-                className="hover:text-black text-neutral-500 transition">
+              <Link key={to} to={to} className="hover:text-black text-neutral-500 transition">
                 {label}
               </Link>
             ))}
@@ -56,12 +55,12 @@ function Footer() {
               {contact.email}
             </a>
             
-              href={`https://wa.me/${contact.whatsapp.replace(/\D/g,"")}`}
-              target="_blank" rel="noreferrer"
-              className="inline-block mt-2 text-xs uppercase tracking-[0.2em] border border-neutral-200
-                px-4 py-2.5 rounded-full hover:bg-black hover:text-white hover:border-black transition"
+              href={`https://wa.me/${contact.whatsapp.replace(/\D/g, "")}`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block mt-2 text-xs uppercase tracking-[0.2em] border border-neutral-200 px-4 py-2.5 rounded-full hover:bg-black hover:text-white hover:border-black transition"
             >
-              ☏ WhatsApp
+              WhatsApp
             </a>
           </div>
 
