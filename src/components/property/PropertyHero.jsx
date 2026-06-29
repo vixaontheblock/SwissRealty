@@ -1,10 +1,15 @@
-import entranceImg from "../../assets/properties/las-quintas/view-tw-the-entrance.jpg";
-
+// src/components/property/PropertyHero.jsx
 function PropertyHero({ property }) {
   const scrollToContact = () =>
     document.getElementById("property-contact")?.scrollIntoView({ behavior: "smooth" });
   const scrollToGallery = () =>
     document.getElementById("property-gallery")?.scrollIntoView({ behavior: "smooth" });
+
+  const statusLabel = {
+    renovation: "En Remodelación",
+    sale:       "En Venta",
+    sold:       "Vendida",
+  };
 
   return (
     <section className="relative h-[90vh] min-h-[560px] overflow-hidden">
@@ -17,18 +22,15 @@ function PropertyHero({ property }) {
       <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/75" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
 
-      {/* Status badge top-left */}
       <div className="absolute top-28 left-5 md:left-8 z-10">
-        <span className="inline-flex items-center gap-2 bg-amber-400/90 backdrop-blur text-black
-          text-[10px] uppercase tracking-[0.2em] px-4 py-2 rounded-full font-medium">
+        <span className="inline-flex items-center gap-2 bg-amber-400/90 backdrop-blur text-black text-[10px] uppercase tracking-[0.2em] px-4 py-2 rounded-full font-medium">
           <span className="w-1.5 h-1.5 rounded-full bg-black/40 animate-pulse" />
-          En Remodelación · Coronado
+          {statusLabel[property.status] || property.status} · {property.subtitle}
         </span>
       </div>
 
       <div className="relative z-10 h-full flex items-end">
         <div className="w-full max-w-7xl mx-auto px-5 md:px-8 pb-16 md:pb-24">
-
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
             <div>
               <h1 style={{ color: "#ffffff", letterSpacing: "-0.02em" }}
@@ -37,7 +39,7 @@ function PropertyHero({ property }) {
               </h1>
               <p style={{ color: "rgba(255,255,255,0.65)" }}
                 className="text-base md:text-lg max-w-xl leading-7 mb-8">
-                {property.subtitle} · Residencia privada tropical en transformación para elevar el estándar de vida en Coronado.
+                {property.location}
               </p>
               <div className="flex flex-wrap gap-3 md:gap-4">
                 <button onClick={scrollToGallery}
@@ -51,15 +53,14 @@ function PropertyHero({ property }) {
               </div>
             </div>
 
-            {/* Specs card */}
-            <div className="flex-shrink-0 bg-white/10 backdrop-blur-lg border border-white/20
-              rounded-[20px] p-6 hidden md:block">
+            {/* Specs card — dinámico */}
+            <div className="flex-shrink-0 bg-white/10 backdrop-blur-lg border border-white/20 rounded-[20px] p-6 hidden md:block">
               <div className="grid grid-cols-2 gap-x-10 gap-y-4">
                 {[
-                  ["$295,000", "Precio"],
-                  ["220 m²", "Construcción"],
-                  ["1,536 m²", "Lote"],
-                  ["3 / 3", "Hab. / Baños"],
+                  ["$" + property.price.toLocaleString("en-US"), "Precio"],
+                  [property.specs.areaSqm + " m²",              "Construcción"],
+                  [property.specs.lotSqm.toLocaleString("en-US") + " m²", "Lote"],
+                  [property.specs.bedrooms + " / " + property.specs.bathrooms, "Hab. / Baños"],
                 ].map(([v, l]) => (
                   <div key={l}>
                     <div className="text-white text-lg font-light">{v}</div>
@@ -69,7 +70,6 @@ function PropertyHero({ property }) {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
