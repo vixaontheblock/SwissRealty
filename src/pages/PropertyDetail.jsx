@@ -1,3 +1,4 @@
+// src/pages/PropertyDetail.jsx
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
 import properties from "../data/properties";
@@ -40,33 +41,26 @@ export default function PropertyDetail() {
     );
   }
 
-  // Solo mostrar renders si la propiedad los tiene (las-quintas por ahora)
-  const showRenders = property.slug === "las-quintas" || property.id === "las-quintas";
-
   return (
     <>
       <Navbar />
       <main>
-        {/* 1. Identidad */}
         <PropertyHero        property={property} />
         <PropertySnapshot    property={property} />
         <PropertyOverview    property={property} />
 
-        {/* 2. Visión a futuro (renders) */}
-        {showRenders && (
+        {property.renders?.length > 0 && (
           <>
             <TransformationVision />
-            <RenderShowcase />
+            <RenderShowcase property={property} />
           </>
         )}
 
-        {/* 3. Estado actual y detalles */}
         <PropertyDescription property={property} />
         <PropertyGallery     property={property} />
         <PropertyFeatures    property={property} />
         <VirtualTour         property={property} />
 
-        {/* 4. Contexto y conversión */}
         <PropertyNearby      property={property} />
         <PropertyMap         property={property} />
         <PropertyDetailsTable property={property} />
