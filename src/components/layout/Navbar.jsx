@@ -1,3 +1,4 @@
+// src/components/layout/Navbar.jsx
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -49,11 +50,10 @@ function Navbar() {
         ${scrolled ? "bg-white/95 shadow-sm" : "bg-white/80"}`}
       >
         {/* ── MOBILE BAR ── */}
-        <div className="flex md:hidden items-center justify-between px-5 py-4">
-          <Link to="/" className="tracking-[0.3em] uppercase text-sm font-light text-neutral-900">
-            Swiss Panama Realty
+        <div className="flex md:hidden items-center justify-between px-5 py-3">
+          <Link to="/" aria-label="Swiss Panama Realty">
+            <img src="/logo.svg" alt="Swiss Panama Realty" className="h-9 w-auto" />
           </Link>
-          {/* Solo el hamburger — sin pills de idioma aquí */}
           <button
             onClick={() => setOpen(true)}
             className="w-9 h-9 flex flex-col justify-center items-end gap-[5px]"
@@ -84,12 +84,12 @@ function Navbar() {
             ))}
           </div>
 
-          {/* CENTER — brand + nav */}
+          {/* CENTER — logo + nav */}
           <div className="flex flex-col items-center text-center">
-            <Link to="/" className="tracking-[0.35em] uppercase text-sm font-light text-neutral-900">
-              Swiss Panama Realty
+            <Link to="/" aria-label="Swiss Panama Realty">
+              <img src="/logo.svg" alt="Swiss Panama Realty" className="h-10 w-auto" />
             </Link>
-            <div className="h-4" />
+            <div className="h-3" />
             <nav className="flex items-center gap-10">
               {links.map((link) => (
                 <Link key={link.to} to={link.to}
@@ -126,8 +126,13 @@ function Navbar() {
           ✕
         </button>
 
+        {/* Logo en panel mobile */}
+        <div className="mb-2">
+          <img src="/logo.svg" alt="Swiss Panama Realty" className="h-10 w-auto" />
+        </div>
+
         {/* Nav links */}
-        <nav className="flex flex-col gap-8 mt-8">
+        <nav className="flex flex-col gap-8 mt-6">
           {links.map((link, i) => (
             <Link key={link.to} to={link.to} onClick={() => setOpen(false)}
               className={`text-2xl uppercase tracking-[0.2em]
@@ -141,7 +146,7 @@ function Navbar() {
           ))}
         </nav>
 
-        {/* Language switcher — en la parte inferior del menú */}
+        {/* Language switcher */}
         <div className={`transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
           ${open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           style={{ transitionDelay: open ? "320ms" : "0ms" }}
@@ -168,5 +173,3 @@ function Navbar() {
     </>
   );
 }
-
-export default Navbar;
