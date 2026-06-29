@@ -1,6 +1,5 @@
+// src/data/properties.js
 // ─── FOTOS REALES ─────────────────────────────────────────────────────────────
-// Archivos existentes en src/assets/properties/las-quintas/
-
 import lasQuintasMain      from "../assets/properties/las-quintas/mainphoto.jpg";
 import lasQuintasPool      from "../assets/properties/las-quintas/pool.jpg";
 import lasQuintasPool2     from "../assets/properties/las-quintas/pool2.jpg";
@@ -18,13 +17,21 @@ import lasQuintasBackyard2 from "../assets/properties/las-quintas/backyard2.jpg"
 import lasQuintasBackyard3 from "../assets/properties/las-quintas/backyard3.jpg";
 import lasQuintasEntrance  from "../assets/properties/las-quintas/view-tw-the-entrance.jpg";
 
+// ─── RENDERS ──────────────────────────────────────────────────────────────────
+import renderFrontal        from "../assets/properties/las-quintas/renders/render-frontal.png";
+import renderTrasero        from "../assets/properties/las-quintas/renders/render-trasero.png";
+import renderCocinaFrontal  from "../assets/properties/las-quintas/renders/render-cocina-frontal.png";
+import renderCocinaMuebles  from "../assets/properties/las-quintas/renders/render-cocina-muebles.png";
+import renderCocinaExterior from "../assets/properties/las-quintas/renders/render-cocina-exterior.png";
+import renderBano           from "../assets/properties/las-quintas/renders/render-bano.png";
+
 // ─── PROPERTIES ARRAY ─────────────────────────────────────────────────────────
 const properties = [
   {
     id:       "las-quintas",
     slug:     "las-quintas",
     featured: true,
-    status:   "renovation",   // "sale" | "renovation" | "sold"
+    status:   "renovation",
 
     title:    "Casa en Las Quintas",
     subtitle: "Coronado, Panamá Oeste",
@@ -42,10 +49,8 @@ const properties = [
       pool:      true,
     },
 
-    // Hero image (tarjetas + PropertyHero)
     image: lasQuintasMain,
 
-    // Galería actual (fotos del estado presente)
     gallery: [
       lasQuintasPool,
       lasQuintasPool2,
@@ -64,19 +69,23 @@ const properties = [
       lasQuintasEntrance,
     ],
 
-    // Sección Before/After — agrega tus fotos "antes" y "después" aquí
-    // Cuando tengas fotos de remodelación, llena este array:
+    // Renders — se muestran en RenderShowcase cuando status === "renovation"
+    renders: [
+      { src: renderFrontal,        title: "Fachada frontal",       caption: "Vista principal de acceso",  span: "col-span-12 md:col-span-7 aspect-[4/3]" },
+      { src: renderTrasero,        title: "Fachada trasera",       caption: "Jardín y área de piscina",   span: "col-span-12 md:col-span-5 aspect-[4/3]" },
+      { src: renderCocinaFrontal,  title: "Cocina · Vista frontal",caption: "Isla central y acabados",    span: "col-span-6 md:col-span-4 aspect-square" },
+      { src: renderCocinaMuebles,  title: "Cocina · Mobiliario",   caption: "Almacenamiento integrado",   span: "col-span-6 md:col-span-4 aspect-square" },
+      { src: renderCocinaExterior, title: "Cocina hacia exterior",  caption: "Conexión con el jardín",     span: "col-span-12 md:col-span-4 aspect-square" },
+      { src: renderBano,           title: "Baño principal",        caption: "Spa privado en suite",       span: "col-span-12 aspect-[16/9]" },
+    ],
+
     beforeAfter: [
-      // Ejemplo de estructura:
-      // { label: "Sala de Estar", before: lasQuintasLounge, after: null },
-      // { label: "Cocina",        before: lasQuintasKitchen, after: null },
-      // Por ahora usamos las fotos actuales como "before":
-      { label: "Sala Principal",  before: lasQuintasLounge,   after: null },
-      { label: "Cocina",          before: lasQuintasKitchen,  after: null },
-      { label: "Comedor",         before: lasQuintasDining,   after: null },
+      { label: "Sala Principal",       before: lasQuintasLounge,   after: null },
+      { label: "Cocina",               before: lasQuintasKitchen,  after: null },
+      { label: "Comedor",              before: lasQuintasDining,   after: null },
       { label: "Habitación Principal", before: lasQuintasMainRoom, after: null },
-      { label: "Piscina",         before: lasQuintasPool,     after: null },
-      { label: "Jardín",          before: lasQuintasBackyard, after: null },
+      { label: "Piscina",              before: lasQuintasPool,     after: null },
+      { label: "Jardín",               before: lasQuintasBackyard, after: null },
     ],
 
     description: `Acogedora casa en venta en Coronado, Las Quintas. La propiedad cuenta con 3 habitaciones, 3 baños, sala de estar, comedor, cocina de concepto abierto, lavandería interior, terraza techada, piscina con bohío, y está totalmente enrejada para privacidad y seguridad. Actualmente en proceso de remodelación completa para entregarse en condición premium.`,
@@ -115,17 +124,17 @@ const properties = [
     droneVideoUrl: "",
 
     tableDetails: [
-      { label: "ID Propiedad",    value: "SPR-0001" },
-      { label: "Tipo",            value: "Casa · En Venta" },
-      { label: "Estado",          value: "En Remodelación" },
-      { label: "Habitaciones",    value: "3" },
-      { label: "Baños",           value: "3" },
-      { label: "Construcción",    value: "220 m²" },
-      { label: "Área del Lote",   value: "1,536 m²" },
-      { label: "Garaje",          value: "1 espacio" },
-      { label: "Piscina",         value: "Sí · con Bohío" },
-      { label: "Comunidad",       value: "Las Quintas, Coronado" },
-      { label: "Provincia",       value: "Panamá Oeste" },
+      { label: "ID Propiedad",   value: "SPR-0001" },
+      { label: "Tipo",           value: "Casa · En Venta" },
+      { label: "Estado",         value: "En Remodelación" },
+      { label: "Habitaciones",   value: "3" },
+      { label: "Baños",          value: "3" },
+      { label: "Construcción",   value: "220 m²" },
+      { label: "Área del Lote",  value: "1,536 m²" },
+      { label: "Garaje",         value: "1 espacio" },
+      { label: "Piscina",        value: "Sí · con Bohío" },
+      { label: "Comunidad",      value: "Las Quintas, Coronado" },
+      { label: "Provincia",      value: "Panamá Oeste" },
     ],
   },
 ];
